@@ -1,0 +1,597 @@
+# ECLIPSE FRONTIER
+## Game Design Document – Version 3.0
+
+**Genre:** 3D Anime Fantasy Incremental RPG  
+**Platform:** Windows PC – Steam  
+**Engine:** Unity 6  
+**Combat:** Hybrid Timed Turn-Based Essence Extraction  
+**Progression:** Class Skill Trees, Mini Clone, Boss Companions, Prestige  
+**World:** Large Open World  
+**Camera:** Third-Person Exploration + Cinematic Combat
+
+---
+
+# 1. Game Overview
+
+Eclipse Frontier là một game 3D anime fantasy RPG tập trung vào chiến đấu theo lượt, thu thập Essence và phát triển nhân vật theo hướng incremental progression.
+
+Người chơi khám phá thế giới mở, gặp gỡ các enemy, tham gia những encounter có giới hạn thời gian và thu thập Essence từ đối thủ.
+
+Thay vì sử dụng hệ thống HP và damage truyền thống, combat được xây dựng xoay quanh ba yếu tố:
+
+- Enemy Essence: lượng năng lượng còn lại của đối thủ.
+- Player Reservoir: khả năng lưu trữ Essence của từng thành viên.
+- Extraction Timer: lượng thời gian người chơi có thể sử dụng để thực hiện hành động.
+
+Essence thu thập được vừa chuyển thành phần thưởng phát triển nhân vật, vừa được tích lũy để tạo Mini Clone và mở khóa Boss Companion.
+
+## 1.1 Core Gameplay Pillars
+
+1. **Essence Extraction Combat:** chiến đấu bằng cách quản lý thời gian, hành động và sức chứa.
+2. **Deep Character Progression:** nhiều class, skill tree và specialization.
+3. **Self-Replication:** tạo Mini Clone có ngoại hình và class giống nhân vật chính nhưng có skill tree độc lập.
+4. **Boss Collection:** mở khóa những boss đã đánh bại dưới dạng Boss Companion.
+5. **Incremental Progression:** farming, automation, prestige và endless scaling.
+6. **3D Open World:** khám phá các vùng đất, dungeon và boss encounter.
+
+---
+
+# 2. World and Exploration
+
+Game sử dụng góc nhìn third-person 3D trong quá trình khám phá.
+
+Thế giới được chia thành nhiều region, mỗi region có:
+
+- Normal enemies.
+- Elite enemies.
+- Mini-bosses.
+- Dungeon bosses.
+- World bosses.
+- Hidden encounters.
+- Exploration rewards.
+
+Các khu vực được tải bằng additive scene loading để hỗ trợ thế giới rộng mà không cần tải toàn bộ map cùng lúc.
+
+Người chơi có thể di chuyển tự do, tương tác với NPC, khám phá dungeon và bắt đầu combat khi tiếp xúc với enemy hoặc kích hoạt encounter.
+
+---
+
+# 3. Core Combat System
+
+## 3.1 Combat Philosophy
+
+Eclipse Frontier không sử dụng HP hoặc Damage System.
+
+Không có:
+
+- Character HP.
+- Enemy HP.
+- Damage calculation.
+- Death state.
+- Traditional healing.
+
+Điều kiện chiến thắng dựa trên việc thu thập Essence và quản lý reservoir.
+
+Combat là sự kết hợp giữa turn-based strategy và action-based timer.
+
+## 3.2 Combat Victory Conditions
+
+Encounter kết thúc khi xảy ra một trong ba điều kiện:
+
+| Condition | Result |
+|---|---|
+| Enemy Essence reaches zero | Victory – Enemy Depleted |
+| Team Reservoir reaches maximum capacity | Victory – Capacity Reached |
+| Extraction Timer reaches zero | Encounter End – Partial Rewards |
+
+Hai điều kiện đầu tiên là chiến thắng. Điều kiện thứ ba kết thúc encounter và người chơi vẫn nhận phần thưởng theo lượng Essence đã thu thập.
+
+## 3.3 Hybrid Timed Turn-Based System
+
+Combat có các lượt hành động.
+
+Người chơi lựa chọn action trước khi thực hiện. Timer không chạy trong lúc lựa chọn, mở menu hoặc xem thông tin.
+
+Timer chỉ giảm sau khi người chơi thực hiện một action thành công.
+
+Ví dụ action time cost ban đầu:
+
+| Action | Time Cost |
+|---|---:|
+| Attack | 5 seconds |
+| Extract | 10 seconds |
+| Focus | 5 seconds |
+| Defend | 3 seconds |
+| Support | 5 seconds |
+| Ultimate | 15 seconds |
+
+Các giá trị này là baseline để prototype và playtest.
+
+Enemy có thể thực hiện phản ứng trong lượt riêng, nhưng lượt enemy không tiêu hao Extraction Timer.
+
+Công thức:
+
+T_remaining = T_initial - Σ ActionTimeCost
+
+Khi timer về 0, encounter lập tức chuyển sang kết quả partial rewards.
+
+## 3.4 Essence Extraction
+
+Mỗi enemy có:
+
+- Max Essence.
+- Current Essence.
+- Extraction Resistance.
+- Extraction Vulnerability.
+- Extraction Behavior.
+- Encounter Timer.
+
+Công thức tính Essence thu thập:
+
+E_gain = min(R × M × T × (1 - Resistance), Enemy Essence, Available Capacity)
+
+Trong đó:
+
+- R: Extraction Rate.
+- M: Skill Multiplier.
+- T: Action Duration.
+- Resistance: Enemy Extraction Resistance.
+- Available Capacity: giới hạn reservoir còn trống.
+
+Không thể thu thập nhiều hơn lượng Essence còn lại của enemy hoặc sức chứa còn trống của party.
+
+## 3.5 Automatic Reservoir Distribution
+
+Mỗi thành viên trong party có một reservoir riêng.
+
+Party cũng có Shared Team Capacity.
+
+Essence tự động được phân phối cho nhân vật có lượng capacity còn trống lớn nhất.
+
+Quy tắc:
+
+1. Tìm nhân vật có Available Capacity lớn nhất.
+2. Chuyển Essence vào reservoir đó.
+3. Nếu reservoir đầy, chọn nhân vật tiếp theo.
+4. Tiếp tục cho đến khi hết lượng Essence cần phân phối hoặc team capacity đầy.
+5. Không reservoir cá nhân nào được vượt giới hạn.
+
+Nếu nhiều nhân vật có cùng Available Capacity, ưu tiên nhân vật có tỷ lệ reservoir đang đầy thấp hơn. Nếu vẫn bằng nhau, sử dụng thứ tự cố định để đảm bảo kết quả nhất quán.
+
+## 3.6 Enemy Respawn and Essence Reset
+
+Mỗi encounter là một instance độc lập.
+
+Khi encounter mới bắt đầu:
+
+- Enemy được khởi tạo với 100% Max Essence.
+- Current Essence được reset về Max Essence.
+- Extraction Timer được reset.
+- Enemy behavior và trạng thái encounter được khởi tạo lại.
+
+Enemy không bị suy yếu vĩnh viễn qua các lần encounter thông thường.
+
+Điều này cho phép người chơi farm lại cùng một enemy nhiều lần.
+
+---
+
+# 4. Enemy AI and Behaviors
+
+Enemy không tấn công bằng hệ thống damage.
+
+Thay vào đó, chúng sử dụng các hành vi tác động đến hiệu quả extraction và reservoir.
+
+| Behavior | Effect |
+|---|---|
+| Disrupt | Giảm Extraction Rate trong một số lượt |
+| Drain | Làm giảm capacity khả dụng |
+| Overload | Tạo áp lực lên reservoir của thành viên |
+| Counter-Extraction | Giảm hiệu quả action extraction |
+| Recovery | Tăng Extraction Resistance |
+| Phase Shift | Thay đổi behavior khi Essence giảm đến một ngưỡng |
+
+Mỗi enemy có behavior riêng để tạo sự khác biệt trong chiến đấu.
+
+Boss có thể có nhiều phase, mỗi phase mở ra một tập hợp hành vi và cơ chế riêng.
+
+---
+
+# 5. Essence Reward System
+
+Essence thu thập được sau encounter được chia thành hai phần.
+
+## 5.1 Hybrid Essence Storage
+
+**Normal Rewards:**
+- EXP.
+- Gold.
+- Class Mastery.
+- Skill Points.
+- Equipment Materials.
+- Awakening Materials.
+
+**Legacy Essence:**
+- Tạo Mini Clone.
+- Nâng cấp Mini Clone.
+- Mở khóa Boss Companion.
+
+Công thức:
+
+Legacy Essence = Collected Essence × Legacy Ratio
+
+Normal Rewards = Collected Essence - Legacy Essence
+
+Tỷ lệ 70% Normal Rewards và 30% Legacy Essence được sử dụng làm baseline thử nghiệm, chưa phải tỷ lệ cố định.
+
+## 5.2 Partial Rewards
+
+Khi timer hết, người chơi không mất lượng Essence đã thu thập.
+
+Extraction Ratio:
+
+Extraction Ratio = Collected Essence / Enemy Max Essence
+
+Phần thưởng được tính theo tỷ lệ Essence thực tế thu thập.
+
+Nếu người chơi thu thập được 650 trên 1,000 Essence, phần thưởng extraction được tính theo tỷ lệ 65% của mức thưởng tối đa.
+
+Khi enemy bị đánh bại hoặc team reservoir đầy, người chơi nhận thưởng dựa trên lượng Essence đã thực sự thu thập.
+
+---
+
+# 6. Mini Clone System
+
+## 6.1 Overview
+
+Mini Clone là bản sao có kích thước nhỏ của nhân vật chính.
+
+Clone có:
+
+- Ngoại hình giống nhân vật chính.
+- Class giống nhân vật chính.
+- Skill Tree riêng.
+- Level và progression riêng.
+- Individual Essence Reservoir.
+- Equipment và passive riêng theo hệ thống được mở khóa.
+
+Clone không đơn thuần là một pet trang trí mà là một party member thực sự.
+
+## 6.2 Clone Skill Tree
+
+Mặc dù có cùng class với nhân vật chính, Mini Clone có skill tree độc lập.
+
+Skill tree tập trung vào các specialization riêng:
+
+- Extraction Efficiency.
+- Reservoir Optimization.
+- Party Support.
+- Skill Replication.
+- Clone Awakening.
+
+Nhờ vậy, người chơi có thể xây dựng nhân vật chính theo hướng chiến đấu và Mini Clone theo hướng hỗ trợ, hoặc ngược lại.
+
+## 6.3 Clone Progression
+
+Clone có thể tăng level, mở khóa passive và phát triển specialization.
+
+Các milestone level ban đầu:
+
+| Level | Unlock |
+|---|---|
+| 1 | Basic Clone Abilities |
+| 10 | First Passive |
+| 25 | Class Skill |
+| 50 | Clone Specialization |
+| 100 | Clone Awakening |
+
+Ngưỡng level có thể thay đổi trong quá trình balancing.
+
+---
+
+# 7. Boss Companion System
+
+## 7.1 Overview
+
+Boss Companion là những boss mà người chơi đã đánh bại và mở khóa để tham gia party.
+
+Người chơi sử dụng Legacy Essence để mở khóa Boss Companion sau khi đáp ứng điều kiện encounter tương ứng.
+
+Boss Companion giữ lại bản sắc, ngoại hình và các kỹ năng đặc trưng của boss gốc, nhưng có bộ chỉ số và progression riêng để phù hợp với vai trò đồng đội.
+
+## 7.2 Boss Companion Progression
+
+Mỗi Boss Companion có:
+
+- Bond Level.
+- Companion Skill Tree.
+- Individual Reservoir.
+- Extraction Specialization.
+- Ultimate Ability.
+- Awakening Form.
+
+## 7.3 Boss Companion in Combat
+
+Boss Companion tham gia trực tiếp vào party 4 người.
+
+Chúng chiếm một party slot như những thành viên khác.
+
+Ví dụ party:
+
+1. Main Character.
+2. Mini Clone.
+3. Mage.
+4. Ancient Dragon Boss Companion.
+
+Người chơi phải lựa chọn đội hình dựa trên khả năng phối hợp và vai trò của từng thành viên.
+
+Boss Companion có thể hỗ trợ người chơi trong những trận chiến với boss cấp cao hơn.
+
+---
+
+# 8. Party and Character Classes
+
+Party có tối đa 4 thành viên active.
+
+Các class ban đầu:
+
+- Knight.
+- Mage.
+- Assassin.
+- Ranger.
+- Cleric.
+- Summoner.
+- Samurai.
+- Alchemist.
+
+Mỗi class có:
+
+- Individual Reservoir Capacity.
+- Extraction Rate.
+- Passive Skills.
+- Active Skills.
+- Class Skill Tree.
+- Specialization Branches.
+- Ultimate Ability.
+
+Class roles phải được cân bằng để không có một class vượt trội ở cả capacity và extraction efficiency.
+
+Ví dụ:
+
+| Class | Main Role |
+|---|---|
+| Mage | High Extraction Rate |
+| Knight | High Reservoir Capacity |
+| Assassin | Burst Extraction |
+| Ranger | Flexible Extraction |
+| Cleric | Reservoir Support |
+| Summoner | Additional Utility |
+| Samurai | Action Efficiency |
+| Alchemist | Resource Conversion |
+
+---
+
+# 9. Incremental Progression
+
+Các lớp progression chính:
+
+1. Character Level.
+2. Class Mastery.
+3. Skill Tree.
+4. Equipment.
+5. Mini Clone Level.
+6. Boss Companion Bond.
+7. Guild Upgrades.
+8. Prestige.
+9. Endless Scaling.
+
+Guild facilities có thể tăng Shared Team Capacity, mở khóa automation và cải thiện phần thưởng.
+
+Người chơi có thể mở khóa dungeon farming, automated expeditions và offline rewards.
+
+Prestige cho phép reset một số progression layer để nhận multiplier hoặc tài nguyên đặc biệt.
+
+---
+
+# 10. UI/UX Design
+
+Combat HUD phải hiển thị:
+
+- Enemy Essence.
+- Team Reservoir.
+- Individual Reservoirs.
+- Extraction Timer.
+- Current Turn.
+- Available Actions.
+- Action Time Cost.
+- Enemy Behavior.
+- Combat Log.
+
+Các màn hình khác:
+
+- Character Status.
+- Class Skill Tree.
+- Mini Clone Management.
+- Boss Companion Collection.
+- Legacy Essence Storage.
+- Equipment.
+- Guild.
+- Prestige.
+- Dungeon Selection.
+
+Màu sắc gợi ý:
+
+- Purple: Essence.
+- Teal: Team Capacity.
+- Orange/Red: Timer.
+- Gold: Rewards.
+- Blue: Support effects.
+
+---
+
+# 11. 3D Art and Presentation
+
+Game sử dụng phong cách anime-realistic với nhân vật 3D chi tiết.
+
+Visual direction:
+
+- Detailed anime-inspired character models.
+- Expressive character animations.
+- Cinematic combat camera.
+- High-quality enemy and boss models.
+- Magical Essence visual effects.
+- Distinctive visual design for Mini Clones.
+- Unique silhouettes for Boss Companions.
+
+Camera:
+
+- Third-person exploration.
+- Cinematic framing during encounters.
+- Close-up skill animations.
+- Clear HUD visibility during combat.
+
+Technical rendering:
+
+- Unity 6.
+- Universal Render Pipeline.
+- Cinemachine.
+- Animator.
+- Animation Rigging.
+- VFX Graph / Particle System.
+- Addressables.
+
+---
+
+# 12. Technical Architecture – Unity 6
+
+Project structure:
+
+```text
+Assets/_Project/
+├── Scripts/
+│   ├── Core/
+│   ├── Combat/
+│   │   ├── TurnSystem/
+│   │   ├── ActionSystem/
+│   │   ├── Extraction/
+│   │   ├── Reservoir/
+│   │   ├── Timer/
+│   │   ├── EnemyAI/
+│   │   └── Encounter/
+│   ├── Characters/
+│   │   ├── Classes/
+│   │   ├── Skills/
+│   │   └── Equipment/
+│   ├── Legacy/
+│   │   ├── LegacyEssenceStorage.cs
+│   │   ├── EssenceConversionService.cs
+│   │   └── LegacyUnlockService.cs
+│   ├── Clones/
+│   │   ├── CloneDefinition.cs
+│   │   ├── CloneRuntimeData.cs
+│   │   ├── CloneFactory.cs
+│   │   └── CloneProgression.cs
+│   ├── Companions/
+│   │   ├── BossCompanionDefinition.cs
+│   │   ├── BossCompanionData.cs
+│   │   ├── CompanionBondSystem.cs
+│   │   └── CompanionSkillSystem.cs
+│   ├── Party/
+│   ├── World/
+│   ├── UI/
+│   └── Save/
+├── ScriptableObjects/
+├── Prefabs/
+├── Scenes/
+└── Tests/
+```
+
+## 12.1 Architecture Principles
+
+- Separate ScriptableObject definitions from runtime state.
+- Use services for combat calculations.
+- Use events to communicate gameplay changes to UI.
+- Keep combat state independent from presentation.
+- Use interfaces or modular action definitions for extensible skills.
+- Save runtime progression through versioned DTOs.
+- Use deterministic reward calculation to prevent duplicate rewards.
+- Build automated unit tests for reservoir, extraction, timer and encounter resolution.
+
+---
+
+# 13. Vertical Slice Development Plan
+
+The first playable version should contain:
+
+**World**
+- One guild hub.
+- One forest region.
+- One repeatable dungeon.
+
+**Characters**
+- One playable main character.
+- Three additional party characters.
+- One Mini Clone.
+
+**Combat**
+- Hybrid turn-based system.
+- Action-based timer.
+- Individual and shared reservoirs.
+- Automatic Essence distribution.
+- Three enemy types.
+- One boss with multiple phases.
+- Partial rewards.
+- Enemy reset on every encounter.
+
+**Progression**
+- Character level.
+- Class skill tree.
+- Legacy Essence storage.
+- Mini Clone creation and upgrades.
+- One Boss Companion unlock.
+
+**Infrastructure**
+- Save/load.
+- Reward persistence.
+- Basic combat HUD.
+- Windows standalone build.
+- Automated gameplay tests.
+
+The vertical slice should demonstrate the complete loop from world exploration to encounter, Essence extraction, reward conversion, Clone creation and Boss Companion progression.
+
+---
+
+# 14. Balancing and Future Development
+
+All initial numeric values are prototype baselines, not final balance decisions.
+
+Important metrics to track:
+
+- Average Essence collected per encounter.
+- Average actions per encounter.
+- Average timer utilization.
+- Average party capacity utilization.
+- Time required to create a Mini Clone.
+- Time required to unlock a Boss Companion.
+- Progression speed across character levels.
+- Party composition diversity.
+- Boss encounter completion rate.
+
+The main balancing objective is to make each class, Clone specialization and Boss Companion useful without creating a single mandatory optimal party composition.
+
+---
+
+# 15. Core Design Identity
+
+Eclipse Frontier is built around three interconnected systems:
+
+**Essence Extraction:** The primary combat mechanic.
+
+**Mini Clone:** A second progression path based on self-replication and independent specialization.
+
+**Boss Companions:** A collection and party-building system that allows previously defeated bosses to fight alongside the player.
+
+Together, these systems form the central gameplay loop:
+
+Explore → Encounter → Extract Essence → Earn Rewards → Accumulate Legacy Essence → Create and Upgrade Companions → Challenge Stronger Enemies → Prestige → Repeat.
+
+**End of GDD v3.0**
