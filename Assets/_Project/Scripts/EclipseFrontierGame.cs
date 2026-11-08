@@ -73,12 +73,23 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         pulse += Time.deltaTime;
         if (flask != null && player != null)
         {
-            bool shaking = Time.time < flaskVisibleUntil;
-            flask.localScale = shaking ? new Vector3(.12f,.27f,.12f) : Vector3.zero;
-            flask.localPosition = shaking ? new Vector3(.35f,.62f,.25f) : new Vector3(.52f,.18f,.02f);
-            flask.localRotation = Quaternion.Euler(0, 0, shaking ? Mathf.Sin(Time.time * 42f) * 32f : 0);
-            if (!actionAnimating) player.localScale = shaking ? new Vector3(1f,.62f,1f) : Vector3.one;
-            if (!actionAnimating) player.position = new Vector3(player.position.x, shaking ? .68f : 1.12f, player.position.z);
+            bool drinking = Time.time < flaskVisibleUntil;
+            flask.localScale = drinking ? new Vector3(.12f,.27f,.12f) : Vector3.zero;
+            if (drinking)
+            {
+                // Keep the prop at Mint's mouth; alternate a short sip with a quick shake.
+                float phase = (Time.time * 2.4f) % 1f;
+                bool sip = phase < .58f;
+                float shake = Mathf.Sin(Time.time * 34f) * (sip ? 4f : 15f);
+                float tilt = sip ? 48f : 12f;
+                flask.localPosition = new Vector3(.16f + Mathf.Sin(Time.time * 34f) * (sip ? .012f : .04f), 1.0f, .18f);
+                flask.localRotation = Quaternion.Euler(tilt, 0, shake);
+            }
+            else
+            {
+                flask.localPosition = new Vector3(.52f,.18f,.02f);
+                flask.localRotation = Quaternion.identity;
+            }
         }
         bool roaming = screen == GameScreen.Explore || (screen == GameScreen.Combat && enemy != null && enemy.Title == "Eclipse Boss");
         if (!roaming || player == null) return;
@@ -329,7 +340,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             Bar(new Rect(x+12,cardY+56,153,8),m.Essence/m.Capacity,new Color(.55f,.32f,.79f));
         }
         float ay=cardY+98, bw=232, gap=20, start=px+(pw-(bw*3+gap*2))/2;
-        ActionButton(new Rect(start,ay,bw,70),"EMPTY FLASK",$"10 sec  ·  kneel, shake, extract",DrinkAndExtract,new Color(.33f,.19f,.47f));
+        ActionButton(new Rect(start,ay,bw,70),"DRINK & SHAKE",$"10 sec  ·  sip from the flask while shaking",DrinkAndExtract,new Color(.33f,.19f,.47f));
         bool isBoss=enemy.Title=="Eclipse Boss";
         Action burstAction;
         if(isBoss) burstAction=MountedStrike;
@@ -365,7 +376,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         float panelWidth=760, panelX=(w-panelWidth)/2, actionY=h-104, bw=232, gap=20;
         Box(new Rect(panelX,h-139,panelWidth,28),new Color(.035f,.04f,.07f,.68f));
         Text(new Rect(panelX+10,h-136,panelWidth-20,22),combatLog,mutedStyle);
-        ActionButton(new Rect(panelX,actionY,bw,66),"EMPTY FLASK","10 sec  ·  kneel, shake, extract",DrinkAndExtract,new Color(.33f,.19f,.47f,.92f));
+        ActionButton(new Rect(panelX,actionY,bw,66),"DRINK & SHAKE","10 sec  ·  sip while shaking the flask",DrinkAndExtract,new Color(.33f,.19f,.47f,.92f));
         ActionButton(new Rect(panelX+bw+gap,actionY,bw,66),"AERIAL RUNE STRIKE","15 sec  ·  leap onto armor, strike rune",MountedStrike,new Color(.48f,.2f,.28f,.92f));
         ActionButton(new Rect(panelX+(bw+gap)*2,actionY,bw,66),"GROUNDING SHOVE","3 sec  ·  break stance, gain 5 sec",GroundingShove,new Color(.22f,.26f,.38f,.92f));
         Button(new Rect(w-190,h-35,165,26),"RETREAT",()=>Finish(false),new Color(.24f,.18f,.2f,.88f));
@@ -425,7 +436,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     {
         flaskVisibleUntil=Time.time+2.4f;
         Extract(1f,10f);
-        if(screen==GameScreen.Combat) combatLog="Empty flask: you kneel, tip it up, and shake it repeatedly for one last drop.";
+        if(screen==GameScreen.Combat) combatLog="You hold the flask to your mouth, take quick sips, and shake it between them for the last drops.";
     }
     private void MountedStrike()
     {
@@ -477,11 +488,11 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         for(int i=0;i<3;i++)
         {
             float t=0;
-            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*Mathf.Clamp01(t/.18f)); player.localScale=new Vector3(1f,.7f,1f); yield return null; }
+            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.12f,.5f*Mathf.Clamp01(t/.18f)); yield return null; }
             t=0;
-            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*(1-Mathf.Clamp01(t/.18f))); yield return null; }
+            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.12f,.5f*(1-Mathf.Clamp01(t/.18f))); yield return null; }
         }
-        player.position=origin; player.localScale=Vector3.one; actionAnimating=false;
+        player.position=origin; actionAnimating=false;
     }
     private bool Spend(float cost)
     {
