@@ -1,0 +1,44 @@
+[2026-11-08T21:23:31.268Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.8f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 25788 --ipc-path Unity-Upm-25788 -l 2 --log-file C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8/Logs/upm.log
+[2026-11-08T21:23:31.299Z][INFO] IPC server started (IPC path=Unity-Upm-25788).
+[2026-11-08T21:23:31.299Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-25788.
+[2026-11-08T21:23:48.534Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:48.904Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:48.905Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:48.908Z][INFO] project:list-packages --> 200 (375 ms)
+[2026-11-08T21:23:49.177Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:49.196Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-11-08T21:23:49.215Z][INFO] config:project:get-registries --> 200 (19 ms)
+[2026-11-08T21:23:49.691Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:49.693Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:49.696Z][INFO] project:list-packages --> 200 (519 ms)
+[2026-11-08T21:23:54.066Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:54.212Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:54.300Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:54.534Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-11-08T21:23:54.601Z][INFO] config:project:get-registries --> 200 (66 ms)
+[2026-11-08T21:23:54.789Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.790Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.792Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.795Z][INFO] project:list-packages --> 200 (586 ms)
+[2026-11-08T21:23:54.795Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.799Z][INFO] project:list-packages --> 200 (733 ms)
+[2026-11-08T21:23:54.885Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.885Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:54.887Z][INFO] project:list-packages --> 200 (587 ms)
+[2026-11-08T21:23:57.085Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:23:57.737Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:57.738Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:23:57.740Z][INFO] project:list-packages --> 200 (655 ms)
+[2026-11-08T21:23:59.835Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-11-08T21:24:05.465Z][WARN] Package [com.unity.ide.rider] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:24:05.465Z][WARN] Package [com.unity.ide.visualstudio] has a non-valid signature — status: Unsigned, reason: No attestation file found, errorCode: ERR_ATTESTATION_NOT_FOUND
+[2026-11-08T21:24:05.467Z][INFO] project:list-packages --> 200 (5632 ms)

@@ -1,0 +1,202 @@
+{
+  "context": {
+    "projectPath": "C:/Users/admin/OneDrive/Documents/Games/game8/Packages",
+    "unityVersion": "6000.6.8f1"
+  },
+  "inputs": [
+    "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Packages\\manifest.json",
+    "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Packages\\packages-lock.json",
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.8f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
+  ],
+  "outputs": {
+    "com.unity.inputsystem@1.20.1": {
+      "name": "com.unity.inputsystem",
+      "displayName": "Input System",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.inputsystem@2436e68c60c4",
+      "fingerprint": "2436e68c60c469edbccef8f6b3c319b9441f4675",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.20.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.collab-proxy@2.14.0": {
+      "name": "com.unity.collab-proxy",
+      "displayName": "Unity Version Control",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.collab-proxy@ac5a9def1e96",
+      "fingerprint": "ac5a9def1e96ce88b8e364a01fb299d3b800e882",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "2.14.0",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ide.rider@3.0.31": {
+      "name": "com.unity.ide.rider",
+      "displayName": "JetBrains Rider Editor",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.ide.rider@7921be93db40",
+      "fingerprint": "7921be93db40ec070fcb01ed82d1c3df1bbdddcd",
+      "editorCompatibility": "2019.2.6f1",
+      "version": "3.0.31",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.ide.visualstudio@2.0.22": {
+      "name": "com.unity.ide.visualstudio",
+      "displayName": "Visual Studio Editor",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.ide.visualstudio@8140e851d83e",
+      "fingerprint": "8140e851d83e922ca2021b04a89519de94ebe38c",
+      "editorCompatibility": "2019.4.25f1",
+      "version": "2.0.22",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.test-framework@1.8.0": {
+      "name": "com.unity.test-framework",
+      "displayName": "Test Framework",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.test-framework@ee3fe9477490",
+      "fingerprint": "ee3fe94774902b8f5a2ad832477ea1dac3dd34d3",
+      "version": "1.8.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.textmeshpro@5.0.0": {
+      "name": "com.unity.textmeshpro",
+      "displayName": "TextMeshPro",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.textmeshpro@5861d0377263",
+      "fingerprint": "5861d037726307b24519f927a66d4bf57ae7bc73",
+      "version": "5.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.timeline@6.6.0": {
+      "name": "com.unity.timeline",
+      "displayName": "Timeline",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.timeline@5aa4cbea9cc5",
+      "fingerprint": "5aa4cbea9cc5a1e5e3d679717fe8ef21bb5f291c",
+      "version": "6.6.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ugui@2.6.0": {
+      "name": "com.unity.ugui",
+      "displayName": "uGUI",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.ugui@fd16ebf174c6",
+      "fingerprint": "fd16ebf174c69d72d45283b3e21396c5f22e12b7",
+      "version": "2.6.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.ai@1.0.0": {
+      "name": "com.unity.modules.ai",
+      "displayName": "AI",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.ai",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics@1.0.0": {
+      "name": "com.unity.modules.physics",
+      "displayName": "Physics",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.physics",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.ui@1.0.0": {
+      "name": "com.unity.modules.ui",
+      "displayName": "UI",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.ui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.imgui@1.0.0": {
+      "name": "com.unity.modules.imgui",
+      "displayName": "IMGUI",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.imgui",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.audio@1.0.0": {
+      "name": "com.unity.modules.audio",
+      "displayName": "Audio",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.audio",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physics2d@1.0.0": {
+      "name": "com.unity.modules.physics2d",
+      "displayName": "Physics 2D",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.physics2d",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.director@1.0.0": {
+      "name": "com.unity.modules.director",
+      "displayName": "Director",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.director",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.animation@1.0.0": {
+      "name": "com.unity.modules.animation",
+      "displayName": "Animation",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.animation",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.particlesystem@1.0.0": {
+      "name": "com.unity.modules.particlesystem",
+      "displayName": "Particle System",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.particlesystem",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ext.nunit@2.1.0": {
+      "name": "com.unity.ext.nunit",
+      "displayName": "Custom NUnit",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.ext.nunit@0198eae3b53e",
+      "fingerprint": "0198eae3b53e4b243332e89e4af7bd396715ad55",
+      "version": "2.1.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.jsonserialize@1.0.0": {
+      "name": "com.unity.modules.jsonserialize",
+      "displayName": "JSONSerialize",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.jsonserialize",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.uielements@1.0.0": {
+      "name": "com.unity.modules.uielements",
+      "displayName": "UIElements",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.uielements",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.physicscore2d@1.0.0": {
+      "name": "com.unity.modules.physicscore2d",
+      "displayName": "Physics Core 2D",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.physicscore2d",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.hierarchycore@1.0.0": {
+      "name": "com.unity.modules.hierarchycore",
+      "displayName": "Hierarchy Core",
+      "resolvedPath": "C:\\Users\\admin\\OneDrive\\Documents\\Games\\game8\\Library\\PackageCache\\com.unity.modules.hierarchycore",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "com.unity.textmeshpro",
+  "displayName": "TextMeshPro",
+  "version": "5.0.0",
+  "description": "This package is no longer supported. TextMeshPro functionalities are now included in the com.unity.ugui package. To continue using them, consider adding it to your project dependencies.",
+  "category": "Text Rendering",
+  "type": "shim",
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  },
+  "_fingerprint": "5861d037726307b24519f927a66d4bf57ae7bc73"
+}

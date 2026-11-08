@@ -1,0 +1,1272 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 28688)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 32276)
+VBCSCompiler prewarm took 18.21 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/respin/6000.6.8f1-b6138bef9630' branch; Version is '6000.6.8f1 (237b6593792b) revision 2325349'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin" at "2026-11-08T09:47:35.8221845Z"
+OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'en' Physical Memory: 15986 MB
+BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-11-08T09:47:35Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.8f1\Editor\Unity.exe
+-projectpath
+C:\Users\admin\OneDrive\Documents\Games\game8
+-acceptSoftwareTermsForThisRunOnly
+-useHub
+-hubIPC
+-cloudEnvironment
+production
+-licensingIpc
+LicenseClient-admin
+-hubSessionId
+89b64ff3-8655-4ee2-884d-5467342675c0
+-accessToken
+l214fLEdaZ6R3MUhd4TDLG79Cqcu-_rRwl6pyUZ9wCI011f
+Successfully changed project path to: C:\Users\admin\OneDrive\Documents\Games\game8
+C:/Users/admin/OneDrive/Documents/Games/game8
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [20212]  Target information:
+
+Player connection [20212]  * "[IP] 192.168.68.103 [Port] 55504 [Flags] 2 [Guid] 3699658349 [EditorId] 3699658349 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-9USHCI8K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [20212] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [20212] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-37900" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.3'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-admin"
+[Licensing::IpcConnector] LicenseClient-admin channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-admin-1.18.3 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 16464)
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-admin-1.18.3, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-1.18.3" at "2026-11-08T09:47:39.1855383Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 16464, path: "C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              0cbbffd9bcad47ee9505cfc137ef8d24
+  Correlation Id:          709b4f2a4e3b2e9bf348cd3bed0282da
+  External correlation Id: 1137162217534053550
+  Machine Id:              XyS67mBr7lNbFCnVQpOxW0v9ASM=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin-1.18.3" (connect: 0.85s, validation: 0.34s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-1.18.3-notifications" at "2026-11-08T09:47:39.5418935Z"
+[Licensing::Module] Connected to LicensingClient (PId: 16464, launch time: 0.00, total connection time: 1.21s)
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated the access token l214fLEdaZ...
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968077721062-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 3.77s
+[Licensing::Module] Licensing is initialized (took 2.96s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 32862917d47166cf5d6607b4a895a33b
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/admin/OneDrive/Documents/Games/game8Unity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.8f1 (237b6593792b)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=262144, entitiesPerBlock=1024, blocksPerSlotPage=0, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/admin/OneDrive/Documents/Games/game8/Assets
+[D3D12 Device Filter] Vendor Name: NVIDIA
+[D3D12 Device Filter] Device Name: NVIDIA GeForce RTX 5060 Laptop GPU
+[D3D12 Device Filter] Driver Version: 32.0.15.9191
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 7899 MB
+[D3D12 Device Filter] Processor Count: 24
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 5060 Laptop GPU (ID=0x2d59)
+    Vendor:          NVIDIA
+    VRAM:            7899 MB
+    App VRAM Budget: 7131 MB
+    Driver:          32.0.15.9191
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56900
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002008 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.046 seconds
+Domain Reload Profiling: 1556ms
+	BeginReloadAssembly (129ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (290ms)
+		LoadAssemblies (122ms)
+		TypeCache.Refresh (200ms)
+			TypeCache.ScanAssembly (184ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (1047ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (598ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 22 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.1 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.inputsystem@2436e68c60c4)
+    com.unity.collab-proxy@2.14.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.collab-proxy@ac5a9def1e96)
+    com.unity.ide.rider@3.0.31 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.ide.rider@7921be93db40)
+    com.unity.ide.visualstudio@2.0.22 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.ide.visualstudio@8140e851d83e)
+  Built-in packages:
+    com.unity.test-framework@1.8.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.test-framework@ee3fe9477490)
+    com.unity.textmeshpro@5.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.textmeshpro@5861d0377263)
+    com.unity.timeline@6.6.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.timeline@5aa4cbea9cc5)
+    com.unity.ugui@2.6.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.ugui@fd16ebf174c6)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.director@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\admin\OneDrive\Documents\Games\game8\Library\PackageCache\com.unity.modules.hierarchycore)
+[Package Manager] com.unity.textmeshpro is deprecated: This package is no longer supported. TextMeshPro functionalities are now included in the com.unity.ugui package. To continue using them, consider adding it to your project dependencies.
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.8f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/admin/OneDrive/Documents/Games/game8
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.8f1\Editor\Data\DotNetSdk\dotnet.exe "C:\Program Files\Unity\Hub\Editor\6000.6.8f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/admin/OneDrive/Documents/Games/game8
+ExitCode: 4 Duration: 1s703ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll (+2 others) [CacheMiss a44a0188db6fc6c840582d0fc1d111a000000000000000000000000000000006]
+[282/406    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[283/406    1s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll (+2 others) [CacheWrite a44a0188db6fc6c840582d0fc1d111a000000000000000000000000000000006]
+*** Tundra requires additional run (1.67 seconds), 2 items updated, 281 evaluated
+ExitCode: 0 Duration: 0s424ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.8f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/admin/OneDrive/Documents/Games/game8
+ExitCode: 0 Duration: 11s
+Finished compiling graph: 409 nodes, 5164 flattened edges (4640 ToBuild, 46 ToUse), maximum node priority 277
+[224/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.rsp
+[247/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.rsp
+[256/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.rsp
+[257/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp
+[258/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.TestFramework.rsp
+[259/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.rsp
+[260/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.rsp
+[261/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.rsp
+[262/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.rsp
+[263/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.rsp
+[264/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.rsp
+[265/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.rsp
+[266/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.rsp
+[267/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.rsp
+[268/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.rsp
+[269/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[270/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[271/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.rsp
+[272/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.rsp
+[273/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.rsp
+[274/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.rsp
+[275/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.DocCodeSamples.rsp
+[276/406    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.rsp
+[277/406    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.dll (+2 others) [CacheMiss 14b1363b501d73fcee646e3e1577897500000000000000000000000000000006]
+[277/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.dll (+2 others) [CacheHit 26fe006e9a7011aba8b8d1b47db2e4f000000000000000000000000000000006]
+[278/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.dll (+2 others)
+[283/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll (+2 others) [CacheHit 9ad526052405431f6fa1d32672f6c4b500000000000000000000000000000006]
+[285/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll (+2 others)
+[291/406    1s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.dll (+2 others) [CacheWrite 14b1363b501d73fcee646e3e1577897500000000000000000000000000000006]
+[296/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.dll.mvfrm
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.dll (+2 others) [CacheMiss 0244b3a7c9ee08dc364e10cdfbf0e51700000000000000000000000000000006]
+[297/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.dll (+2 others) [CacheWrite 0244b3a7c9ee08dc364e10cdfbf0e51700000000000000000000000000000006]
+[309/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll.mvfrm
+[310/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.dll.mvfrm
+[311/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.dll.mvfrm
+[312/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.dll.mvfrm
+[313/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/UnityEditor.UI.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.dll, with 149 defines and 306 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.dll (+2 others) [CacheMiss c519b340941b1ac42d7842e87fbeea1100000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.dll (+2 others) [CacheMiss 6307a24432e48410e219dd2f1b65439e00000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.dll (+2 others) [CacheMiss 49c50bb5395428375c69c1fe2de25d1e00000000000000000000000000000006]
+[314/406    0s] CopyFiles Library/ScriptAssemblies/UnityEditor.UI.pdb
+[315/406    0s] CopyFiles Library/ScriptAssemblies/UnityEditor.UI.dll
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll (+2 others) [CacheMiss 2ecd2817dca1d6f96732aa38f98115af00000000000000000000000000000006]
+[316/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.dll (+2 others) [CacheWrite c519b340941b1ac42d7842e87fbeea1100000000000000000000000000000006]
+[318/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InternalAPIEngineBridge.004.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEngineBridge.004.dll, with 148 defines and 273 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[319/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.004.pdb
+[320/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll.mvfrm
+[321/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.004.dll
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll (+2 others) [CacheMiss 70dd37dcf23373141bca0db84504889900000000000000000000000000000006]
+[322/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.dll (+2 others) [CacheWrite 49c50bb5395428375c69c1fe2de25d1e00000000000000000000000000000006]
+[324/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.Timeline.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.dll, with 149 defines and 273 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[325/406    0s] CopyFiles Library/ScriptAssemblies/Unity.Timeline.pdb
+[326/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll.mvfrm
+[327/406    0s] CopyFiles Library/ScriptAssemblies/Unity.Timeline.dll
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll (+2 others) [CacheMiss 71f6fa58dd4ab19f71518bbcf3ed2cfa00000000000000000000000000000006]
+[328/406    3s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll (+2 others) [CacheWrite 70dd37dcf23373141bca0db84504889900000000000000000000000000000006]
+[330/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.TextMeshPro.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll, with 149 defines and 274 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[331/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll.mvfrm
+[332/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.dll.mvfrm
+[333/406    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.pdb
+[334/406    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.dll
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll (+2 others) [CacheMiss 7528b76804dc7cf2086e73d16de0072600000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.dll (+2 others) [CacheMiss e447966516814010e76d9e78039b2b8a00000000000000000000000000000006]
+[335/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.dll (+2 others) [CacheWrite e447966516814010e76d9e78039b2b8a00000000000000000000000000000006]
+[337/406    3s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll (+2 others)
+[338/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/UnityEditor.UI.Analytics.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.Analytics.dll, with 146 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll (+2 others) [CacheWrite 71f6fa58dd4ab19f71518bbcf3ed2cfa00000000000000000000000000000006]
+[339/406    0s] CopyFiles Library/ScriptAssemblies/UnityEditor.UI.Analytics.pdb
+[340/406    0s] CopyFiles Library/ScriptAssemblies/UnityEditor.UI.Analytics.dll
+[342/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll (+2 others)
+[343/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.Timeline.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll, with 147 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll (+2 others) [CacheWrite 7528b76804dc7cf2086e73d16de0072600000000000000000000000000000006]
+[344/406    0s] CopyFiles Library/ScriptAssemblies/Unity.Timeline.Editor.pdb
+[345/406    0s] CopyFiles Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+[347/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.TextMeshPro.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll, with 146 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[348/406    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb
+[349/406    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+[350/406    5s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.dll (+2 others) [CacheWrite 6307a24432e48410e219dd2f1b65439e00000000000000000000000000000006]
+[356/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InputSystem.TestFramework.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.TestFramework.dll, with 150 defines and 267 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[357/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InputSystem.DocCodeSamples.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.DocCodeSamples.dll, with 146 defines and 300 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[358/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InputSystem.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.dll, with 159 defines and 273 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[359/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.dll.mvfrm
+[362/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.pdb
+[365/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.dll
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.dll (+2 others) [CacheMiss dd679f4c00a70689ceeb0e5723b70b6d00000000000000000000000000000006]
+[366/406    6s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll (+2 others) [CacheWrite 2ecd2817dca1d6f96732aa38f98115af00000000000000000000000000000006]
+[367/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.PlasticSCM.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll, with 148 defines and 303 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[368/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.pdb
+[369/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.dll (+2 others)
+[370/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll
+[371/406    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.PlasticSCM.Editor.ref.dll_257AEB342BE77856.mvfrm
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.dll (+2 others) [CacheWrite dd679f4c00a70689ceeb0e5723b70b6d00000000000000000000000000000006]
+[373/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll.mvfrm
+[374/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.dll.mvfrm
+[375/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.dll.mvfrm
+[376/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InputSystem.ForUI.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.dll, with 148 defines and 274 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.dll (+2 others) [CacheMiss fa225de84ef1da73e7ee33ef22799e4900000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll (+2 others) [CacheMiss b1a31f624b1007650cb99a3a559b508700000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.dll (+2 others) [CacheMiss a43317237977e3ffa0e3e2f4a5a2804f00000000000000000000000000000006]
+[377/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.ForUI.pdb
+[378/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll
+[379/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.dll.mvfrm
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.dll (+2 others) [CacheMiss e54d6f60c41e51b09613c1d9be9a5f6500000000000000000000000000000006]
+[380/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.dll (+2 others)
+[381/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.dll (+2 others)
+[382/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.dll (+2 others) [CacheWrite fa225de84ef1da73e7ee33ef22799e4900000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.dll (+2 others) [CacheWrite a43317237977e3ffa0e3e2f4a5a2804f00000000000000000000000000000006]
+[383/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll (+2 others) [CacheWrite b1a31f624b1007650cb99a3a559b508700000000000000000000000000000006]
+[           0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.dll (+2 others) [CacheWrite e54d6f60c41e51b09613c1d9be9a5f6500000000000000000000000000000006]
+[385/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.PlasticSCM.Editor.Assistant.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Assistant.dll, with 146 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[386/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.PlasticSCM.Editor.Entities.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.Entities.dll, with 146 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[387/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.CollabProxy.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll, with 146 defines and 308 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[388/406    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.PlasticSCM.Editor.Assistant.ref.dll_8E2FBDF189F35426.mvfrm
+[389/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.Assistant.pdb
+[390/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.Entities.dll
+[391/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.Entities.pdb
+[392/406    0s] CopyFiles Library/ScriptAssemblies/Unity.PlasticSCM.Editor.Assistant.dll
+[393/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InputSystem.ForUI.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.Editor.dll, with 146 defines and 309 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[394/406    0s] CopyFiles Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb
+[395/406    0s] CopyFiles Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+[396/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.ForUI.Editor.pdb
+[397/406    0s] CopyFiles Library/ScriptAssemblies/Unity.InputSystem.ForUI.Editor.dll
+[398/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm
+[399/406    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm
+[400/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[401/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 148 defines and 277 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[402/406    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[403/406    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[404/406    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[405/406    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 146 defines and 321 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[406/406    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[407/406    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (11.14 seconds), 109 items updated, 406 evaluated
+AssetDatabase: script compilation time: 14.163099s
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 6.05 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.755 seconds
+Domain Reload Profiling: 1793ms
+	BeginReloadAssembly (404ms)
+		DisableScriptedObjects (38ms)
+		CreateAndSetChildDomain (164ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (536ms)
+		LoadAssemblies (405ms)
+		TypeCache.Refresh (101ms)
+			TypeCache.ScanAssembly (90ms)
+		AnalyzeDomain (24ms)
+			BuildScriptInfoCaches (20ms)
+	FinalizeReload (756ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (309ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (10ms)
+		AwakeInstancesAfterBackupRestoration (38ms)
+Starting new worker id: 0 with log in C:/Users/admin/OneDrive/Documents/Games/game8/Logs/AssetImportWorkerHW0.log
+Importing 'GUID: cb67edc1800c2ec4ba8dfb1cf0dfc84a - Path: Packages/com.unity.ide.visualstudio/Editor/COMIntegration/Release/COMIntegration.exe' with importer (DefaultImporter)
+Imported 'GUID: cb67edc1800c2ec4ba8dfb1cf0dfc84a' -> (Import Result ID: '382cf197a08bce8c0f3a817fdaa75e04') in 0.051 seconds [static dependencies only]. Details - ImportResultOutputID=b9c287c27e0f1bb4e3c7a5e560e89af8 DependenciesID=cc0b635fc7ea31e237c8efa30416495e StaticDependenciesID=0ef8ce14629c0d8080b227b356f259d9 
+Importing 'GUID: b00873b178b4a4802a1138b9b904a4d3 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconunityproject@2x.png' with importer (TextureImporter)
+Imported 'GUID: b00873b178b4a4802a1138b9b904a4d3' -> (Import Result ID: 'b7b9390440eda093a7cfdd41f32ac2d3') in 0.031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e67492fbbf6bbdceff3392c0248db982 DependenciesID=212f1a23ac16d7bd3c02ff152e2898a8 StaticDependenciesID=f025487e77e35ce4ff36c5a5b98d7870 
+Importing 'GUID: 93298c6fcbff047f8aca0c4c8420f143 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlast@2x.png' with importer (TextureImporter)
+Imported 'GUID: 93298c6fcbff047f8aca0c4c8420f143' -> (Import Result ID: 'aa77c43837d76aa8e0e1a65dc7820a56') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5236fbcc9efb86a359a4f4f9d2e19452 DependenciesID=cb5db1901de8ec18770722f5f2db7e2c StaticDependenciesID=e46bfffc73dbde7a97ec711bf9edd716 
+Importing 'GUID: c85b40db2caf143ceafa56767450fa11 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconunityproject.png' with importer (TextureImporter)
+Imported 'GUID: c85b40db2caf143ceafa56767450fa11' -> (Import Result ID: '1509845c4328c16233e105e39b05bcf1') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=93abc567c041cc02cf2ad81c32ee3a4d DependenciesID=365ddc6392f1a4d7f565c5600b6573a1 StaticDependenciesID=5808e127ce237dc481682c70d0a4c4f3 
+Importing 'GUID: 00bfe929205f54a9bab375cde9fd56f5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 00bfe929205f54a9bab375cde9fd56f5' -> (Import Result ID: '50077b4e0cde33e96118442c55da477e') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=8dad19509ec85bebd4b26a94231ac1be DependenciesID=52f9dbfc052f932eda50f1b4aaf3916d StaticDependenciesID=d9edc17561d0136f1261591147abdc29 
+Importing 'GUID: 20a3d61d5116042d398e15383ad8bee4 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 20a3d61d5116042d398e15383ad8bee4' -> (Import Result ID: '8a1ffc0648f8622da2f9be0b1d1799ca') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=f199e31eb02ef5765c145dfce4e5ebe4 DependenciesID=b8d81a23f31b337fe1b303ce169e9cf3 StaticDependenciesID=01b6688504ab93ea70e6cf70ccbe2d5b 
+Importing 'GUID: 4080b8724d6184c0491b783c26826d58 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4080b8724d6184c0491b783c26826d58' -> (Import Result ID: '829be79cbbf16ce10a5cce2210f5732e') in 0.006 seconds [static dependencies only]. Details - ImportResultOutputID=07fb50345dc8c02f2b42a891a07fddfb DependenciesID=e645ef9bdcb74322aa5d141ee159b42a StaticDependenciesID=f940e739cded038770419a26f02cc9d4 
+Importing 'GUID: 408f175592eca4bb1ac7f9ff36587dd9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 408f175592eca4bb1ac7f9ff36587dd9' -> (Import Result ID: '3676ecb90714e02ddf953623b3c86d78') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=3b3deb2134635d10a74373c3af12d53d DependenciesID=584e5558906a11bed24c7fdd28c40e4b StaticDependenciesID=6469feef1d8bd7cd7585e2455a58f5f3 
+Importing 'GUID: 6022bdd5b2896a54f94123b812705321 - Path: Packages/com.unity.ide.visualstudio/CHANGELOG.md' with importer (TextScriptImporter)
+Imported 'GUID: 6022bdd5b2896a54f94123b812705321' -> (Import Result ID: '5982efc9a333188ae95343925566a6df') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=bb1ad5629b0b649a8590fce9e66efa9b DependenciesID=e62addeb8298f10cb6fad6f80d11693d StaticDependenciesID=ede5dbecf7d263a7a92e07ea38e6b5d4 
+Importing 'GUID: 70b6b01df577b45c7b9e65912b8c1d7e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 70b6b01df577b45c7b9e65912b8c1d7e' -> (Import Result ID: '111d37123e2ddebcde2caab53643e92b') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=25a4656caee2892d984f6f652a99ca30 DependenciesID=393ad82a6ced4df9d9e8a6690d21b393 StaticDependenciesID=fe2a83d662284a2415d71a76afa98af8 
+Importing 'GUID: 80291a4e9abdf4cd0bfadf2a982fb864 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 80291a4e9abdf4cd0bfadf2a982fb864' -> (Import Result ID: 'ce162139156a9118d32a07a4aefb9b7d') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=674f5850b54b3bb4c594bcbca248f589 DependenciesID=8fd0866c39ed0e5b5c9764dfdb59eea7 StaticDependenciesID=292a269d576c3be197128908d6d0b67d 
+Importing 'GUID: 90bedc4df98974e7f81d3234a4a1aff2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 90bedc4df98974e7f81d3234a4a1aff2' -> (Import Result ID: '3dab5a7e291529ec8d32d8b9da7df71d') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=7d97e3ebcef8da5f2ccf1508537cb55b DependenciesID=b4869e469b7c0cba0272388051007fe0 StaticDependenciesID=0fe8797d251f0773a44b5a8bf56f0175 
+Importing 'GUID: 010400789cb24c99a88a6e868095b6cb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/code-review-address.md' with importer (TextScriptImporter)
+Imported 'GUID: 010400789cb24c99a88a6e868095b6cb' -> (Import Result ID: 'b18fbc8a0b5322cc6b9deb6a9a2164ab') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=7a8890815856b12c0d92c2002174b989 DependenciesID=99745df9dfeee6d9419d818602faa4b3 StaticDependenciesID=3cbe7c7e25301f6f3e34ac22719f8db1 
+Importing 'GUID: 315a8aa8d12f4c09b9e53ea4f12e21bf - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/query-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 315a8aa8d12f4c09b9e53ea4f12e21bf' -> (Import Result ID: '7121a914c005134d46cbd8cd090e604d') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=c65a6f1f67d28e8584363eb393905805 DependenciesID=c87ae9eeaad59e019709a8cb25eec4ed StaticDependenciesID=aa45150c769bbc5650eaae4d4591b210 
+Importing 'GUID: 61f04d3f5f24b4a509f6e3e9bae7d26b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 61f04d3f5f24b4a509f6e3e9bae7d26b' -> (Import Result ID: '02ba6b0ce4467c2976dd8b64ca8c0aca') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=e77f40fc4d60c42e5e1de5dbae19d706 DependenciesID=2b99d340d9b9e4584497d91f56f3606d StaticDependenciesID=3c0c841777896e81a61d6a3ae1cae00a 
+Importing 'GUID: 71ed39f270ce488db48ba40679226837 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/onboarding-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 71ed39f270ce488db48ba40679226837' -> (Import Result ID: '4bf5560a1cf79638dfa0986e85866fa2') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=87b5bc29a41d6a6fd35788eb2340b6f6 DependenciesID=b7086dc292a67a134373cad015717e61 StaticDependenciesID=a2a7fe2c08ea0e33df02c4865abe27fc 
+Importing 'GUID: 8186ab7f8464a437492ad228835db228 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 8186ab7f8464a437492ad228835db228' -> (Import Result ID: '34ebb40b44b764a63dea57d64f54b5aa') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=c5859703b786ab2b0656660adcc57ed6 DependenciesID=ad8fecaa5c07b747b494ff5f68bfc814 StaticDependenciesID=b46d6003f68aea3ef109a65099872b8e 
+Importing 'GUID: 91ff7208c07c6411fbe0ce735bde836c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 91ff7208c07c6411fbe0ce735bde836c' -> (Import Result ID: '7c1f9f391d78acc45d1ab0696c76f2c4') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=c5cafec960463736e18b6fccd2640bf3 DependenciesID=8b41b1a9245ad378da281d95e0f0bd86 StaticDependenciesID=af190ef80f6069961241fdaa2011aa0f 
+Importing 'GUID: b1743f61aa8a840b4b6ce60a39b631da - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: b1743f61aa8a840b4b6ce60a39b631da' -> (Import Result ID: 'f883d2dd492387917900e6e18850b2c3') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=b5e9cca727903ff653ec971e2e2fa777 DependenciesID=75c1d7e7adf75893c33a198e4582f5bc StaticDependenciesID=c9d6ebee8714197cd32b86def6d44a48 
+Importing 'GUID: c1082c3e86982497f802edc1043c6084 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: c1082c3e86982497f802edc1043c6084' -> (Import Result ID: 'e9b3641ef2bf4b9ea708b8ca626da376') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=bd61b8c73cc8ab187565f9e93d84a2c8 DependenciesID=64a0249c7b052ebdebacebb1d271dede StaticDependenciesID=42a73e0cbbbe7551345d766463d6a2bc 
+Importing 'GUID: e13839fd5a39d4d1283be7279d68160c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: e13839fd5a39d4d1283be7279d68160c' -> (Import Result ID: '1f62e0bc792eb0ffd2818c137b8edea7') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=e0fb7d868d8ec41679b556cb5cd68e85 DependenciesID=eceef4ef9c737703ba531e28f035df9b StaticDependenciesID=83d687431d126024f29450741528f1c0 
+Importing 'GUID: 027b9fcb077b24ff7a5d791b557050ba - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 027b9fcb077b24ff7a5d791b557050ba' -> (Import Result ID: 'edd8a98bc2a495ea3ca6f5560167fdaa') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=ed2b38d4611cc62b71bf6266b34f82e8 DependenciesID=35ff708f638f61532725377a7c02cea9 StaticDependenciesID=e1d6a3b6aced5858837a986138eeca43 
+Importing 'GUID: 220e9325710f4235a43492dd1ee4980d - Path: Packages/com.unity.textmeshpro/package.json' with importer (PackageManifestImporter)
+Imported 'GUID: 220e9325710f4235a43492dd1ee4980d' -> (Import Result ID: '26160e7c50c1d460c4509c33be1fa4c1') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=65e6e29766c6b56b7b3999df1f8e3315 DependenciesID=9b9445e251cd88fa621fd81d45d7a545 StaticDependenciesID=3f739a7fbf0ed17b5ccd5968911f52b9 
+Importing 'GUID: c295ba332bedf45bdb1c588f8a345082 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: c295ba332bedf45bdb1c588f8a345082' -> (Import Result ID: '4d5273df4ff6469629b8ac4cfe0c202d') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=9147361f38c9fb452fc57908d572355b DependenciesID=507d5b71de29ea3664e9166895647549 StaticDependenciesID=c894fac001ad2f8d080465fa12a1b296 
+Importing 'GUID: e2240734f45a34c139e99ae6b6bf5a70 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: e2240734f45a34c139e99ae6b6bf5a70' -> (Import Result ID: '6116566a093aa3bb9c77873adc44d7b9') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=0a281fa8a653c5d41094bf7bfdfb8e7c DependenciesID=1c37a5082b98c3621c33f5c61d7da056 StaticDependenciesID=cca6f6bcdfb7d505c979743dab3266d1 
+Importing 'GUID: f2333b6fb2b6d446195f6a57fc9793cd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: f2333b6fb2b6d446195f6a57fc9793cd' -> (Import Result ID: 'b4eb4a78e1ac8b605d08b1192ce8bada') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e719cf311e2c83f44e3cb6b9b8ded9c0 DependenciesID=65bf1496ab2aa63f53549cb356093998 StaticDependenciesID=d75d92fc1f73e5e8d9128a35c6f9e004 
+Importing 'GUID: 0327c5b1354224ebb9e88fc3db5b3ada - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 0327c5b1354224ebb9e88fc3db5b3ada' -> (Import Result ID: '3bee0e06f8c6968352f2d3dfa51d1684') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=4b81180b48ea67607f426408ed878ff8 DependenciesID=874251c654ae2aa338b65af19bd4ccfd StaticDependenciesID=ce0e64fe942f88d2ccae30551afbb4ad 
+Importing 'GUID: 132f2d5191aee4056b0e82dc34bf56af - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 132f2d5191aee4056b0e82dc34bf56af' -> (Import Result ID: '5542a6e340ea07b265ce4f4e18ba2bff') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9e85a297a93c348e02554eda3398596f DependenciesID=f8e4387b3131d106b0c4acbb3525df40 StaticDependenciesID=fabeea922ef635e81a5a9dcb1f0142a8 
+Importing 'GUID: 63b7b969d64304c77926a890e305c83b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 63b7b969d64304c77926a890e305c83b' -> (Import Result ID: '77de0653f281977e0eea82d4b7739940') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7be382d133e0a75ca9de026d674af77e DependenciesID=83856c9a47477680f3c3426d51f129f4 StaticDependenciesID=263bf9d6657481626db382fd7fc3e120 
+Importing 'GUID: d3ca5a7ed155446b4bcc1e084a9d15fd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: d3ca5a7ed155446b4bcc1e084a9d15fd' -> (Import Result ID: 'e6e24a593e9c3a06bf402307dd7b0cde') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2fa8d8f9e5d478abaa2062a18c41046f DependenciesID=e3887bbaeb9b6ab0a5e48d2f860110c7 StaticDependenciesID=b21db61fc2edd3e83f1b720557d1c5a0 
+Importing 'GUID: e3acb1bc94ac44585a423cf7f76f653f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: e3acb1bc94ac44585a423cf7f76f653f' -> (Import Result ID: 'f1ddf1b7d44c7dc24a35211ed341e82b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=5f40b2cc563ca69e313c79ab910f82e1 DependenciesID=248b928d19b03b5924cd570536a674c1 StaticDependenciesID=86a1eda1d986bad5268d83174f81ca41 
+Importing 'GUID: 34377e1611c724574901eb032b70efa0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 34377e1611c724574901eb032b70efa0' -> (Import Result ID: 'bfd43f489386107dffdc67cd6953c7be') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=4116489b564b496d44131503aae7facd DependenciesID=7aec1f7ddde37c95416ad75efad03e24 StaticDependenciesID=6aa024c69de04ee4be000bba60012377 
+Importing 'GUID: 4404e800a61914f739e4ff241918f606 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4404e800a61914f739e4ff241918f606' -> (Import Result ID: 'b1d6d2dd857137f3270a812227dc2244') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=aebcf8be3cc43be811ff0d33a863bdfb DependenciesID=2afb3a1aecb24c77163fa1329565d9c1 StaticDependenciesID=906ed78e8d030a332239bcd6ffe86084 
+Importing 'GUID: 4485aad1ea3c437fa0501f15cd52e288 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/SKILL.md' with importer (TextScriptImporter)
+Imported 'GUID: 4485aad1ea3c437fa0501f15cd52e288' -> (Import Result ID: '85c4b422b36c00c0fffa0c144f35a28d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=5098a96a49172a00fc87e00c5ffb7fb1 DependenciesID=98967777a53320a0bd685cbf80782975 StaticDependenciesID=b2beb3860f6448a33a6f9ebdf7e7726f 
+Importing 'GUID: 64115b2476a9040dd93900167c480826 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 64115b2476a9040dd93900167c480826' -> (Import Result ID: 'a8ba12fffce09255743cb906fbc636e6') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=4b35781b52aa48bbff2ea1e247bb988c DependenciesID=8ef40adf60b387ba8d0f3ab1f352a57f StaticDependenciesID=67c8242d5bdb5f635bf0d320931c5caf 
+Importing 'GUID: 743fda8c4b219c8429fb5a77ede1c879 - Path: Packages/com.unity.collab-proxy/package.json' with importer (PackageManifestImporter)
+Imported 'GUID: 743fda8c4b219c8429fb5a77ede1c879' -> (Import Result ID: '2e5986b217f116a255f0f7e999c07317') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f107c1a7029e41c6d9616dba029257cb DependenciesID=41fb912813f83904acf3a1765cf106b6 StaticDependenciesID=54e969174132a88917f7f7e8998f6d5b 
+Importing 'GUID: a4c4e9c1a43104d1496393bf3d21f4c1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: a4c4e9c1a43104d1496393bf3d21f4c1' -> (Import Result ID: '14da2008edb46f1371fcdd3545bf40a9') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=d2dfb4d7f16fae82dde88b97c9549d4f DependenciesID=ac14c3eaeb61ba49ceba13784b5cfab3 StaticDependenciesID=b51db471b4a81016a8699e1c629fc2e6 
+Importing 'GUID: a458e3e9811f5476ba2e0455e0d83321 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: a458e3e9811f5476ba2e0455e0d83321' -> (Import Result ID: '2d95104c0be28585629b0efb54c607e4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=991b0b4190caebb85126841204ea26be DependenciesID=5f69d0d9fef1d47d3ecbb13f3cfda1eb StaticDependenciesID=8ae0eadb0cf5c7302f1a4cbad11e7e31 
+Importing 'GUID: a40c91a4a00e949db8bd5361a1a5f2d0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: a40c91a4a00e949db8bd5361a1a5f2d0' -> (Import Result ID: 'e84d30aeaecef3735be7fd65729af938') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a50ef4c957253c19f8f1a417fe97612a DependenciesID=d288a810d072e2102e0242eb4194b180 StaticDependenciesID=bb878e3b9b9239a0cb2aed61d666facf 
+Importing 'GUID: c410ee31b62e84a4eb7b800bce1e9b37 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: c410ee31b62e84a4eb7b800bce1e9b37' -> (Import Result ID: '55741d72d673e393dd48045234c8189d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ca25bb5fc07811606f666f2ecef6283d DependenciesID=f1ad0943fde91f81b483cf36c0bafd7b StaticDependenciesID=8d1ad20b5a8dd72cbfd29ae156bc9e0d 
+Importing 'GUID: d47232c866714824b686affeb7c6db5e - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/undo-revert-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: d47232c866714824b686affeb7c6db5e' -> (Import Result ID: '3744ae6ede35e7a9e9b4418771c26f10') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3bad1e939b896c706b1c17ad9f7b1303 DependenciesID=e47b1006b25df0180acf54518fd74392 StaticDependenciesID=bb7c8a3c753c412e8f617dfe074d38fa 
+Importing 'GUID: d495fac91c1bb4951997f93de873e3e9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: d495fac91c1bb4951997f93de873e3e9' -> (Import Result ID: '44f52cb2fd249d96947c1ef2528e9487') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=03e90917a99f8ec3ace3550ac2b53a78 DependenciesID=e6c76e99210ee478eb8dd7adfa913290 StaticDependenciesID=6f5f392949a6d9daa263184ef5f6fd7f 
+Importing 'GUID: 05a3a19e2aee44b95b8881bc4dbe5596 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 05a3a19e2aee44b95b8881bc4dbe5596' -> (Import Result ID: 'e3326af82a291f0c088b50857254e071') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=15e241b6cfc29e332899bcecf94cbf2c DependenciesID=8839c65002b1782a959a63ceb50d4511 StaticDependenciesID=dc47cb8034531c3a54229c74337474b8 
+Importing 'GUID: 05e4a8f4a31da46098006dc87a3c219e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 05e4a8f4a31da46098006dc87a3c219e' -> (Import Result ID: '1a9dace94b2178f82cc131b17ec20b94') in 0.079 seconds [static dependencies only]. Details - ImportResultOutputID=a24d361541e5985d26f4c088014b27b4 DependenciesID=82158949c8ffebe775f0991a59feb881 StaticDependenciesID=66ee9730c0eb6afdde84961cc587ed8f 
+Importing 'GUID: 25af8faf5e3ab497a9bd76e62652101b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 25af8faf5e3ab497a9bd76e62652101b' -> (Import Result ID: '724cd243851cd8cc01e8a3c4e1c2d8df') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=5a29682f9aa19d550b7f29ee39e01352 DependenciesID=f263a99ca34cdb720ec33da9a57ada15 StaticDependenciesID=cca6faf79dac6af262d2670bd5ba6277 
+Importing 'GUID: 353c9a121987948b9b6f79be926c535a - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 353c9a121987948b9b6f79be926c535a' -> (Import Result ID: '6b0b5b8497e3e7e86bf6ea33b3d43027') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=1d4731a3c4e6801f54dde5cb18f286b4 DependenciesID=3ae18d69bc5b58035b602a36f575236a StaticDependenciesID=771046664411e66c789015a8aadfdc3c 
+Importing 'GUID: 5598b14661b5f4c43bed757f34b6d172 - Path: Packages/com.unity.ide.rider/LICENSE.md' with importer (TextScriptImporter)
+Imported 'GUID: 5598b14661b5f4c43bed757f34b6d172' -> (Import Result ID: '106464f9989df0455bf0ec5786e10e56') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=617607fbffa5d08b29e8cf86a7c0212d DependenciesID=edb8d756144d68748dcf2dda23ad62cb StaticDependenciesID=4d591aac4925ee1aa41123d531feab89 
+Importing 'GUID: 65a51125587384727b85c4eec9bed20e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 65a51125587384727b85c4eec9bed20e' -> (Import Result ID: 'b9e1069b3f24bbc15e0d705263e276c5') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c026ef5b8a0858dc7ea91a1937d91d1c DependenciesID=da45d588672fe6ab66e723f213d72dd3 StaticDependenciesID=43405edb6a8ad574fae6bba845e80731 
+Importing 'GUID: 656f74f6edaa396458412b9e3903d8cd - Path: Packages/com.unity.ide.visualstudio/package.json' with importer (PackageManifestImporter)
+Imported 'GUID: 656f74f6edaa396458412b9e3903d8cd' -> (Import Result ID: '74763677e560121456b730c7f9192044') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=434102884997b781209707f6f5c82d76 DependenciesID=15ddc400c7216d49deaed8935e30f205 StaticDependenciesID=cb1fd95a54ef3dcef14b1b3ada73e6d0 
+Importing 'GUID: c5963e0b0ebae462ba1a9620316c2216 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: c5963e0b0ebae462ba1a9620316c2216' -> (Import Result ID: '57de8d43c113e914123a8880795124db') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=083625f92bbef0442c288419b745cf0c DependenciesID=9f9e936042232c6c73e3486b0f50d7a3 StaticDependenciesID=758e00c5900f61bc72000b923771140b 
+Importing 'GUID: f5e94de8cdbf42538ec918b8ef3c5ceb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/data-model.md' with importer (TextScriptImporter)
+Imported 'GUID: f5e94de8cdbf42538ec918b8ef3c5ceb' -> (Import Result ID: '11b8a68584ca4a41d862245cfb8c7f9a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6bc708509f9eb64fb2d167677959877e DependenciesID=6b50e7837986509aa135cfe393de3b05 StaticDependenciesID=0f6caa372869614fcb59e1463c916e25 
+Importing 'GUID: 06764b736fb2b412d96ea21302f7e2d7 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 06764b736fb2b412d96ea21302f7e2d7' -> (Import Result ID: '1166ca1c25819b3b189b81564f41da40') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2c5f054827a2de0590d028d9985704f7 DependenciesID=9a5c0f7670b5ec94e8df3d76f93bdddb StaticDependenciesID=3aadce6f935d7dc426d88c77ab0394af 
+Importing 'GUID: 1634345fddac94db799d19f3dde68bc9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 1634345fddac94db799d19f3dde68bc9' -> (Import Result ID: '0d4f8c7dc1feceb407c4508f402bdac6') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=cf4bcc63c89a2cd7c8e4a1bbcf3ef7bb DependenciesID=bffaf9e5554ff1afeded6a342b9265f7 StaticDependenciesID=e0d039e5aa0170a571cfa466ef0c0789 
+Importing 'GUID: 26561e13ba42d4f64bf125200637a94f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 26561e13ba42d4f64bf125200637a94f' -> (Import Result ID: '5c67688814a4b847b34953fe6a19f6a0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3aa2df72d6051f3e0d21515b951f681b DependenciesID=11f50bfd39202c866442d93425a890e6 StaticDependenciesID=83201e6dbc697e944dd04e1b937b6fc9 
+Importing 'GUID: 66c95bb3c74257f41bae2622511dc02d - Path: Packages/com.unity.ide.rider/package.json' with importer (PackageManifestImporter)
+Imported 'GUID: 66c95bb3c74257f41bae2622511dc02d' -> (Import Result ID: 'a55a1cbe51300a4487b06125c392c381') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=da853d0d63267b365c7dac45746ce2ed DependenciesID=429989e26bfdfded1257051197db757b StaticDependenciesID=5d986e198318f6a29d578bbaec267a2b 
+Importing 'GUID: 76e4c883524c841d7ad60032db468122 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 76e4c883524c841d7ad60032db468122' -> (Import Result ID: '913d024a3ce5a99ac44e6adc8cf341c9') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=3787fc89885d426d900b03eb949ab5ba DependenciesID=192374c6db11a731eb5b6932b0a3bee3 StaticDependenciesID=aca3e9cc8c65bcd15ca8f9b5744d2f12 
+Importing 'GUID: 764d8575c77af47fa804dcc6fbeb01cb - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 764d8575c77af47fa804dcc6fbeb01cb' -> (Import Result ID: 'b1ab2be0ee055a374d85dc0292e89964') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e162f828be47ae21380b00383ca26512 DependenciesID=cc84c0906b5a36ca396df378fcaa638c StaticDependenciesID=6cb295dcd3d671a741e56d9277a655ef 
+Importing 'GUID: 8645aa9c3c74fb34ba9499e14fb332b5 - Path: Packages/com.unity.ide.rider/CHANGELOG.md' with importer (TextScriptImporter)
+Imported 'GUID: 8645aa9c3c74fb34ba9499e14fb332b5' -> (Import Result ID: '6482d0e391deffe5c346c0d5e24ca75f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=fbb8d4d458210a51a2391ff586b2969c DependenciesID=f96b156131e5a6503cbdc3d93c2e9b06 StaticDependenciesID=297ad0c4b7d3976c6d7e8797660027e5 
+Importing 'GUID: 86a8aa74abaf94d05ae56976eba276ec - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 86a8aa74abaf94d05ae56976eba276ec' -> (Import Result ID: '7497234613d3bfced4c83d7cbf508ed2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a177e9c50e86cc1b5ca6b9267824e057 DependenciesID=43c7bc8ed43ba181d55cc0ebd138ad35 StaticDependenciesID=5c5c860acff567ce48a89a8d3d3c4ccd 
+Importing 'GUID: 960158b55bcb644a5b70fff280a781af - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 960158b55bcb644a5b70fff280a781af' -> (Import Result ID: '698487d988b12784c96259070892f5f3') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a5dad4b648b01877ba5b42e15e91e6f7 DependenciesID=e8c65c3d689d7a656abcfe2cf7025d42 StaticDependenciesID=0eb5b9ff087382b1a1c7cdebe770697d 
+Importing 'GUID: 965ae256fd2947198b4671264e59e84f - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/query-syntax.md' with importer (TextScriptImporter)
+Imported 'GUID: 965ae256fd2947198b4671264e59e84f' -> (Import Result ID: '78d609a6dc8a06067ee2083dfef5ff92') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6b18f7786a0096fb5b6b2b94255ad37d DependenciesID=624ec60afae3774cc1e22618ed6011a1 StaticDependenciesID=89ba2a2a33fb7d9a0e0ebbd853e5ef34 
+Importing 'GUID: e6b7483d9dc934870ac16e92f6d90852 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: e6b7483d9dc934870ac16e92f6d90852' -> (Import Result ID: 'a03b84e29914243215df8ed0311e9525') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=90140c40cd3fe1e22f7056726fcc14c3 DependenciesID=5f14e771862c8f2c34eec1ec8c996a48 StaticDependenciesID=6b1357b5f8b89f86b3ff945fca6f4a4b 
+Importing 'GUID: 179c67b17726147a98486e04cfa9bac5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 179c67b17726147a98486e04cfa9bac5' -> (Import Result ID: '06bcb9a5d28357873006b80ad57c860c') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=ff713b60c33f5b8997e3f53645632204 DependenciesID=a3f1fb8ed37ac73fc3391a9d59c41cf0 StaticDependenciesID=ddb950e8162e520d2ba542c49436810a 
+Importing 'GUID: 47777d81697d65f45befb6ccd55b2324 - Path: Packages/com.unity.collab-proxy/CHANGELOG.md' with importer (TextScriptImporter)
+Imported 'GUID: 47777d81697d65f45befb6ccd55b2324' -> (Import Result ID: 'e598cd9c8d647463d23425cf58932afd') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=38cd1f6a6a470e1d41eb93bce9b33d47 DependenciesID=552e857366da1824bcd6bae34957770e StaticDependenciesID=c263ae521f71518875269c2c77b3a787 
+Importing 'GUID: 67fde336a66c84ce18bc49b8932e9cf3 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 67fde336a66c84ce18bc49b8932e9cf3' -> (Import Result ID: '9d701ac950a661cb5b854631571f3500') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=651fdf7f6e097b22d1739bea8c71291d DependenciesID=6f51fe050d0f94f374aebb7607a21b6f StaticDependenciesID=b77913ae458edaf0ef97c23dc057e206 
+Importing 'GUID: 9721b402f8ae458ab0143dc17a9abd02 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/tool-reference.md' with importer (TextScriptImporter)
+Imported 'GUID: 9721b402f8ae458ab0143dc17a9abd02' -> (Import Result ID: '959d394478036a1a117ef0bd58143876') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7b51384030d7fd857c6a73283917a8f5 DependenciesID=a824916922c4bc16188f55b5326d6e84 StaticDependenciesID=242c116d38b6e9e5d76219340830bc0e 
+Importing 'GUID: a7d830eb57b94c14b2cc26ee9cc31ecc - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/clickable-links.md' with importer (TextScriptImporter)
+Imported 'GUID: a7d830eb57b94c14b2cc26ee9cc31ecc' -> (Import Result ID: 'c9d16dff52d764779393d63a1129be0d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=dbc1515c75a55abd38266003210b3263 DependenciesID=72472387f0e8e79eada9c9b0db06d142 StaticDependenciesID=0a0af70c97288e86552ffe781a26fe5b 
+Importing 'GUID: 08f8b5169c88e4ca9a290aee1c944644 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 08f8b5169c88e4ca9a290aee1c944644' -> (Import Result ID: '1ac303d729efa68dfb488dff97fbfa21') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9dc3c4a18eb3bbfb828d9d7009e7da24 DependenciesID=b52f0f5f64b85033cc261016a1f5fa5c StaticDependenciesID=92b253e0e194e6464d45fb5a072decab 
+Importing 'GUID: 184a1c940f6324dc4aa662247e4bc7c6 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 184a1c940f6324dc4aa662247e4bc7c6' -> (Import Result ID: '8ade38ec4aceda60172f91694f4d9878') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=533452774ce61b150c68ec4aeffe8f57 DependenciesID=a76a7e2c27bf9f3a1199ddf66e881ed0 StaticDependenciesID=266845422cc0a333784cb5bdd2618de9 
+Importing 'GUID: 48352914d6fea4b74b6b7d9755e18afe - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 48352914d6fea4b74b6b7d9755e18afe' -> (Import Result ID: 'b427c41082a36b113225d43c6b4a5bfb') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ccdc0f48d8a450526d83ab56b7eac7dc DependenciesID=9136febd1e5b212936e88ff347b17e4a StaticDependenciesID=fdf0025485d151c89018083de0bddac5 
+Importing 'GUID: 585b5c57b814c4f53846090265480899 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 585b5c57b814c4f53846090265480899' -> (Import Result ID: 'bb41114bfc33a10652b7871920ef9660') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=311552d5b0b872a5c552c2fb3273d227 DependenciesID=8c29c3751ca1b9164c4a6b3040baa150 StaticDependenciesID=5d83365010baaa9b785e90350a2b34ba 
+Importing 'GUID: 682cbc1694c234163a142bafbc7b641b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 682cbc1694c234163a142bafbc7b641b' -> (Import Result ID: '77849fac87f1fe6bc053463c4775a7ac') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0272521764bca6e6f6d4117984e7eb2f DependenciesID=c7d820ab8741ff45f6b101b30dedca57 StaticDependenciesID=17e2231a432a95840945c65b6d9b35d3 
+Importing 'GUID: 788fbcfc0abc6c54b9504cfee3176c22 - Path: Packages/com.unity.ide.visualstudio/ValidationExceptions.json' with importer (TextScriptImporter)
+Imported 'GUID: 788fbcfc0abc6c54b9504cfee3176c22' -> (Import Result ID: 'ae80fd2de3ddad74daef2aba5af89135') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=405724472b77bdb627df94e04502c938 DependenciesID=a9ad4db96519a6a1bf38f375769656c3 StaticDependenciesID=58c25e15c45eafcacf60bcd9f92b12bc 
+Importing 'GUID: 78ffcf86c37e64163ad74ed8322911c2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 78ffcf86c37e64163ad74ed8322911c2' -> (Import Result ID: '7bcbeb9cf2bb7fdd9dd5b4b35cc9186d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6e72e7af02763a37d5e88c3616ae2809 DependenciesID=6721d7a5a61b10caede0134c50395d1c StaticDependenciesID=576c51fe26e9be3fd59e0f1a43065d98 
+Importing 'GUID: 88856b116c7b141f580095c9d97de14f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 88856b116c7b141f580095c9d97de14f' -> (Import Result ID: '088497a371d75cf5b41c4fba68ebaa2c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4387b55ebdffc8c977d396ad48329f67 DependenciesID=dc32e0b9d7bf605e6607c3649975de1f StaticDependenciesID=117034f12b02289a2573e62000488586 
+Importing 'GUID: 989a92435cb9845e589778ec8f4fd33c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 989a92435cb9845e589778ec8f4fd33c' -> (Import Result ID: '34ffdbb623b224a6e6f4c4bb40d4df61') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=cd8cc8a72efc8515feb7c073a63a87c3 DependenciesID=20eee709c90d4ec0020f6ce5994e209e StaticDependenciesID=6ceb4bdc33712f11265ab55a484840c6 
+Importing 'GUID: c889c90b320244d2da78494389489c4b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/common.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: c889c90b320244d2da78494389489c4b' -> (Import Result ID: '0b033feda09388a4de4281711a869b95') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=154c2dd6b94cfb84ed5a2dca950dafaa DependenciesID=44daef66f0b0334ea99e9561a1b6b1b9 StaticDependenciesID=250d9e6c989fffa070a3653fcd7dff7b 
+Importing 'GUID: 398a8e5463e7847e6805774e0537843e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 398a8e5463e7847e6805774e0537843e' -> (Import Result ID: '87213c7571b1f71aea105e4bb486b49a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bdd217bf0593a98fc76119cd0032c67b DependenciesID=6b3be084bd5b1793c43cf05dfaede896 StaticDependenciesID=9d10b92a2e46a3b055584c8fe7821c3a 
+Importing 'GUID: 89425210677b241ed9877501fbf6f240 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 89425210677b241ed9877501fbf6f240' -> (Import Result ID: '5cc4a846110095af493bc8623d3caf62') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a36994a652460cd2a939f187c6e53afd DependenciesID=15a2e6341ba7433e817ae971716bcb8c StaticDependenciesID=f03813ef74caaabd8dd78a8e18841f50 
+Importing 'GUID: a994733912fae4c62976079886dacd4d - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: a994733912fae4c62976079886dacd4d' -> (Import Result ID: '63ccaad4ccb64e2179f6abb5b813035f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=128ffeadb0b67d7ff71ebacdde1960ff DependenciesID=3b9e8dae7944f6ed35801c9985266c53 StaticDependenciesID=e2899526462553df5aa159903212e3e3 
+Importing 'GUID: a9cf5a99d9904821959440ad1613d916 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/file-history-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: a9cf5a99d9904821959440ad1613d916' -> (Import Result ID: '97c33cee663b801b06cba5cf4ad56d8f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b47431fd7e96e26d676132c17dd79f3e DependenciesID=54dd10099333d53f07442fa4fd211465 StaticDependenciesID=2f0d16e5cb1a013b6c707fefb00c2c40 
+Importing 'GUID: b9904df168220490a9a8acd80138f629 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: b9904df168220490a9a8acd80138f629' -> (Import Result ID: '66c7c195d3d14323e205c3dd5753ece5') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=8a76bf8ab3ca233e693dc01d625cfe84 DependenciesID=2bbdc6ff92a720101cec72a755aa201e StaticDependenciesID=8b4947b5c75380a996c3076e59586353 
+Importing 'GUID: d925d1074d7e4f138ca54cf8415aa323 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/branch-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: d925d1074d7e4f138ca54cf8415aa323' -> (Import Result ID: '21494500591633c5610d1e829b8270b6') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d6a91b9c971c56dd74735dcdd7d2633f DependenciesID=e6ddc138ce5bf51d2b991995e5137784 StaticDependenciesID=556d77690634bc213aa28e60d9a74387 
+Importing 'GUID: f95542db51d344cd2b65c52cc55be86e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: f95542db51d344cd2b65c52cc55be86e' -> (Import Result ID: '7ecdb37db9c0920ba4b33b6215d0c63d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=098660282b7685230938977be7492ee1 DependenciesID=442d2cdd5417870bee516d43b41d4b56 StaticDependenciesID=db13caaf50c3cc86470376e6d068acad 
+Importing 'GUID: 2ab1ef0daffb64e60a62a083afbd42b1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/common.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 2ab1ef0daffb64e60a62a083afbd42b1' -> (Import Result ID: 'db3565cdefec10c4a8cd887555f8955d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d346fb742c853f555153038cd226763a DependenciesID=85ce04c30681d8214c4713d0549a3f45 StaticDependenciesID=b68e2543f2495bf9ab4080da8e853c6c 
+Importing 'GUID: 2af16183ba18446f1a808cc5928b80f6 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 2af16183ba18446f1a808cc5928b80f6' -> (Import Result ID: '8275e01ef6f7d0063dece48bee8e100f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2434e02f0d0e2fc7133f3ad0345c7265 DependenciesID=8f8f97e25300721d5a46380d0926bf4b StaticDependenciesID=23d2a9c4e90d710d453a705e1e24d545 
+Importing 'GUID: 3adc465f3b7df4a29ad5554493587fcc - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 3adc465f3b7df4a29ad5554493587fcc' -> (Import Result ID: '057eaacc865ecf5cbe04161049a701fc') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=52e9c073c36396f559f5185a0f300276 DependenciesID=56d357d4b598ed9ebd96d3301bfb1102 StaticDependenciesID=c303703449106137ec254495879b29a4 
+Importing 'GUID: 4a0af4e4bd28f436b9c48e3063d25de1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4a0af4e4bd28f436b9c48e3063d25de1' -> (Import Result ID: 'dc926323496bd19d8ce2a31d457dec40') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=637b51875ea15ad0652af1129cc71bce DependenciesID=f3cc6adf116a70d696a7a60de1e62adc StaticDependenciesID=3a4c67b2d439dc8ef39070655d3f6f78 
+Importing 'GUID: 5a5ba6b1f19cd4721ab8b72e92df3f49 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 5a5ba6b1f19cd4721ab8b72e92df3f49' -> (Import Result ID: '930424269c634215a8c6b62917331165') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=3bc9e3d94408d42df1af9ca68e5e4cd4 DependenciesID=070e2b3fedcfbb4492ecaf7c9e86d288 StaticDependenciesID=5910c199f23c9c015e19f9e45ddcd063 
+Importing 'GUID: 6a652c95b7bbb49afaa72cf9ca612753 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 6a652c95b7bbb49afaa72cf9ca612753' -> (Import Result ID: 'a6ed2e118301fae634c6e22833fc09e9') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bc5d11e8f2ca319e85df1951f43749f8 DependenciesID=a774ee15f353ce4542bf3d1da3b6bbed StaticDependenciesID=4d129782dedf9fa528cf31d96b5c559f 
+Importing 'GUID: 8a82f24fed91b4671960de2fa77d4398 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 8a82f24fed91b4671960de2fa77d4398' -> (Import Result ID: '0c5e1bc1e3e452d81cdcb820d713fa46') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=5a30a6f55d3efbbb5fd8e16e36c87f84 DependenciesID=3dd95dd38caf2b1a065c1ac9fecb309a StaticDependenciesID=878c5a26571cca1a62685e2c40e68377 
+Importing 'GUID: da5fbb13c6934901a6ae8dba6f20636a - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/code-review-create.md' with importer (TextScriptImporter)
+Imported 'GUID: da5fbb13c6934901a6ae8dba6f20636a' -> (Import Result ID: '7a0a55f7a13f712ccf942ae7582e7f99') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6fa5067a3e3815739daebbe70d10548a DependenciesID=f3ec51299e59e9fd03607ea879fb582e StaticDependenciesID=f60cb29e5bbb528424edb27f00e2db26 
+Importing 'GUID: eac8fc2893d09496bac8c94bfcc9bd46 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: eac8fc2893d09496bac8c94bfcc9bd46' -> (Import Result ID: '4407eb7371e1f4b2e838605ba2a3c447') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=1f8de8eeb5bf1a3ae1519efd61073460 DependenciesID=4ec79814db0b385ed9953c7343d0f3fb StaticDependenciesID=7032d87edccec3b71951b04c7ce950c2 
+Importing 'GUID: 0ba9990c66a354291a758e68fb623812 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 0ba9990c66a354291a758e68fb623812' -> (Import Result ID: '42ced2dc1e8f3f6cae5d3037ffc7b0f0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=dccc9ae97791fab6131238711973f996 DependenciesID=5600de3a360fa62c883a9aa44dc76e16 StaticDependenciesID=eaa3431c3c29f9ef5b6bfc4124c021c3 
+Importing 'GUID: 1bf9fa9553af7475c87ad89dc57d4880 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 1bf9fa9553af7475c87ad89dc57d4880' -> (Import Result ID: '600aa69391979b10d0f6bd896fefd5c4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=fcf8018b750d4edcb70c1651fcadc043 DependenciesID=e586dc730cef1ff0accae55eaeb587fe StaticDependenciesID=2b2fb9f8733365b43e443ad002cb0fdd 
+Importing 'GUID: 3b387a6cdde14551838ac396aacafaa2 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/root-cause-analysis.md' with importer (TextScriptImporter)
+Imported 'GUID: 3b387a6cdde14551838ac396aacafaa2' -> (Import Result ID: '346b4f49de873d9e8d97af6f1dafcd52') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=802642ef824099ae6aafbdf368bbf654 DependenciesID=363b157062782dfd31f99a8e0a27e379 StaticDependenciesID=0d16aabde12fcfc734771af0ef59f2a7 
+Importing 'GUID: 4b04f1ef35a0b4852839897fbbd7a826 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4b04f1ef35a0b4852839897fbbd7a826' -> (Import Result ID: '9149b96537ef2a7a5467beacb8898f46') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d878b38539c83b2b0ab89ba702c3ae83 DependenciesID=c74b5a0c273ce146429267f3cddf2f98 StaticDependenciesID=54c0bba0b844bb178e17e627a3b7b05f 
+Importing 'GUID: 4bdac13a0e954013b856627b0a84e22e - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/ignore-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 4bdac13a0e954013b856627b0a84e22e' -> (Import Result ID: 'c4e09d79add1cdb27a69c6bc2d9be5dd') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=806fdcedfda8915d6d43aa74b5b64dd5 DependenciesID=5f7a89d9544bc7abebd91c832a014503 StaticDependenciesID=0bfc48571af73d12593c9a1ba6e47bd2 
+Importing 'GUID: 6b25d40a1684441fda32f7ad278f6773 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 6b25d40a1684441fda32f7ad278f6773' -> (Import Result ID: '4b4533339c77609cda00f4232e6781f9') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=b6e77e2dd98a81b3f584abee7d77b647 DependenciesID=3d3e62ab16c60666dd79c5fedd512220 StaticDependenciesID=99bfe40560a6710f81109cb421309f5a 
+Importing 'GUID: 7b4445ae4bf449b69a0a5ee61068a536 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/checkin-shelve-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 7b4445ae4bf449b69a0a5ee61068a536' -> (Import Result ID: '5eb67184d90227c5bd88b8a7e62b7589') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a58bbd0429571f6aa3618d0ae0f84f62 DependenciesID=b95c8caa8126161edc51f3cdd762676c StaticDependenciesID=cd77c6435c9985e9af1c6c57e263b9b5 
+Importing 'GUID: 9bff32140d1498a4a9f6f18b09e8959c - Path: Packages/com.unity.collab-proxy/Third Party Notices.md' with importer (TextScriptImporter)
+Imported 'GUID: 9bff32140d1498a4a9f6f18b09e8959c' -> (Import Result ID: '6c9418a78a8b58335917e1fd52c78143') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bea9a8fbf2dd4d1077da661dcb268e38 DependenciesID=f5c02ec51ba2d9a6fee58f1f369cf5a3 StaticDependenciesID=61c79525631b5a6302acee49d855052f 
+Importing 'GUID: bb38e05f2f80c423cb2ee0e568aecbc5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: bb38e05f2f80c423cb2ee0e568aecbc5' -> (Import Result ID: 'b98765cce48d30ce5fa88772bf104f79') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=fe2aa57733bb3bfbb402799adbfc782f DependenciesID=ad9726dfb643f3b518c550d37d754bcf StaticDependenciesID=c92139e7c660a74b0a04097f7200a794 
+Importing 'GUID: bb2a6b8e790774da7b0a51cd1a28dca1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: bb2a6b8e790774da7b0a51cd1a28dca1' -> (Import Result ID: '1c198f728ad1d326be7a5ef3f47ab520') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c54207e23ef8c6351d85ab46d8913ad4 DependenciesID=d15f0d03c19fb816ee7810732be5a4b3 StaticDependenciesID=5411aa091a58ab63b80de9b1da01aca8 
+Importing 'GUID: cbe6bc33c17c246ac8ffb0ee71eb5dfa - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: cbe6bc33c17c246ac8ffb0ee71eb5dfa' -> (Import Result ID: 'dc8ae3cb17a67bdd04144498956c7b55') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=21c8232daff3d88b77a90f05e7e3c3c7 DependenciesID=5ec6fbe21be85a6feb7238b166b8af4f StaticDependenciesID=c5d27662a35d065630c359cc2b509b96 
+Importing 'GUID: ebd217572ad84c01a93906cecd9a6cc3 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/label-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: ebd217572ad84c01a93906cecd9a6cc3' -> (Import Result ID: 'f51f1d1120315e4fa550df7755436ad0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ae9d324fd2da6c07316ce6f1b2a98702 DependenciesID=4cce43081b19b46d2e64503368407c3f StaticDependenciesID=aa29079a5b956698dd378302a47b6ab3 
+Importing 'GUID: 1c3692f791aad44ea91bbd30154ff16b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 1c3692f791aad44ea91bbd30154ff16b' -> (Import Result ID: '32d67afef80242269190d3f7fabb7956') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=59614fd428c47eba4f56d85bc6c2d9dd DependenciesID=d57a6c25c0cb1fe9856b303ab394e13c StaticDependenciesID=e389059367b27d7176d4b220ce298f60 
+Importing 'GUID: 4c9114c594b374bf19b4e25841bf2690 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4c9114c594b374bf19b4e25841bf2690' -> (Import Result ID: 'd69ad2ea61d3092968c320bc8541493a') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=7d6de59c9e0301141c6d533648f500b8 DependenciesID=e33aceddf3883bf72d5b5f02c36dc3c5 StaticDependenciesID=ec728a84570f093f3f5b3f0775e563dd 
+Importing 'GUID: 6cd4994526f54c9d8ba76a1d914f1a1b - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/annotate-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 6cd4994526f54c9d8ba76a1d914f1a1b' -> (Import Result ID: 'c8629cdb1b8b7d662507af3c4be33b85') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=96ed0fceec7f9bc643a8bd2642fdd785 DependenciesID=912dc92cfd82ecfe2a55c5b143f14d4b StaticDependenciesID=d7af2d7d6fdd90783f66b39f276ef7bd 
+Importing 'GUID: 6cf6f311a588243059b293d648cbe7a9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 6cf6f311a588243059b293d648cbe7a9' -> (Import Result ID: 'aacf6bf8cabc10a92302150c97ac8da2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b734f74d32f2ff5e64a2961d475efe35 DependenciesID=90873b2dd2ee4676543e802059df6f1e StaticDependenciesID=0ca7d03e8a13674388762e246c59e9fb 
+Importing 'GUID: 9cc30c82b6595438899ea11370813817 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 9cc30c82b6595438899ea11370813817' -> (Import Result ID: '70886d8052bbe28f8d08327f24604836') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=e54aadd94db7b517e8b62915cf4e8066 DependenciesID=0740ff333ef67c42bf33a128b7c8dba7 StaticDependenciesID=b272941ea5ca08e48fea77771ef2283e 
+Importing 'GUID: dc9f2fde24d74ff78046602ce6dff758 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/lock-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: dc9f2fde24d74ff78046602ce6dff758' -> (Import Result ID: '824cd60320a3408442fb90bf42c10164') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9d5ca2a40ba11e75cefcf7f4136959e5 DependenciesID=b702c2af449cc32d8930d8236171d6ba StaticDependenciesID=f745d5e0c2d057a302ea9b31549d3627 
+Importing 'GUID: 1d5aaaa1da7e54bf69a4b3fec47d59fd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 1d5aaaa1da7e54bf69a4b3fec47d59fd' -> (Import Result ID: '88c70373ba5acbe5de293f9998cf0851') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a4d2ba12eb2548bb69132ab36966adc DependenciesID=8d8d985700f5b12d7395884d79a7c4b1 StaticDependenciesID=66a854c1f5a46849509ac763cb7e7f3a 
+Importing 'GUID: 6d9433f04c2f24ccfb821081740abb62 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: 6d9433f04c2f24ccfb821081740abb62' -> (Import Result ID: '896c77919fe381f287125de81d06de6b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e66da8eb41de5fa92d768802297b11c2 DependenciesID=e405c22081b1ee04eb82dfb948484ba4 StaticDependenciesID=e1c2752f20b529f36df41d79b56401d8 
+Importing 'GUID: edc6fe3642b4b492fa069e5f8c84b127 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.zh-Hans.txt' with importer (TextScriptImporter)
+Imported 'GUID: edc6fe3642b4b492fa069e5f8c84b127' -> (Import Result ID: '3ef0b79dd2444cce572df81d524ee795') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=77b57688ae78535496bbe4268a625cab DependenciesID=d888ccb5f8fad1a55897442430ed9534 StaticDependenciesID=5025a62e039f901bf732ebc6b4c4f30f 
+Importing 'GUID: 1e6e493582b3d41b9adcbd539dd9611b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: 1e6e493582b3d41b9adcbd539dd9611b' -> (Import Result ID: 'c1743e6bfc1eb1a097ab0825ba480786') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=966251d2dde9bf34b1b1d83128a28cdd DependenciesID=58cea9db0a7563a4337aaebfcfa6d797 StaticDependenciesID=138a85fd0ac150b543ac67bb57f928bb 
+Importing 'GUID: 5e83f8baac96eaa47bdd9ca781cd2002 - Path: Packages/com.unity.ide.rider/CONTRIBUTING.md' with importer (TextScriptImporter)
+Imported 'GUID: 5e83f8baac96eaa47bdd9ca781cd2002' -> (Import Result ID: 'f7a441acd0f155a6bb52e82022a5dd2b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=24668c3e36a29e796d1ad427d3fc4ea8 DependenciesID=b852b3d7655f9789e7c31cc9fc64c410 StaticDependenciesID=3c59649ca636f6aa5f80ce98d68e33d0 
+Importing 'GUID: 7e24b663c0eb4b269d3ca1f0d22790eb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/merge-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: 7e24b663c0eb4b269d3ca1f0d22790eb' -> (Import Result ID: '67cac2580eeb867945186063e9fa50ce') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=637385f35439a37cc2173aaf3b594ba9 DependenciesID=f5029bb4a8296d117aa4d9e392005684 StaticDependenciesID=512d517cbbac7146c82aee274a951255 
+Importing 'GUID: 7e5963ce065a04e76b46cc0592dc98e7 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.ja.txt' with importer (TextScriptImporter)
+Imported 'GUID: 7e5963ce065a04e76b46cc0592dc98e7' -> (Import Result ID: '67b8e8a9315d9c576f76e5eef478397f') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=d61a0c8544a2817780571027e3c29fc1 DependenciesID=4bde481c7e3805bd20160dbdc33c7874 StaticDependenciesID=aacacde0e219dfc424779b49437bf2a5 
+Importing 'GUID: 7ec9a0860faab451797ae823a1c1f512 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 7ec9a0860faab451797ae823a1c1f512' -> (Import Result ID: '049537d6a4fa79069173716e60f20bd2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=244de2928c7db800f2ec875c2749570a DependenciesID=33476fde1c550f0c1f90b03384cc66ee StaticDependenciesID=fd98d49caf6a65e59adbf78e5093e5ed 
+Importing 'GUID: ae8e2d51a70f4c7c8850ee7fba1bb390 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/diff-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: ae8e2d51a70f4c7c8850ee7fba1bb390' -> (Import Result ID: '6e032cba1c14b73e20dc5a3c24a78af4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=66f170e79c5c4d67add11062537a9e22 DependenciesID=f91a2b0894dc6ef5f14a1968088effda StaticDependenciesID=d53980163dd3a2b8cb203cbb7dec01bb 
+Importing 'GUID: ce97d95af58794dd786eb061adf03c0e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.zh-Hant.txt' with importer (TextScriptImporter)
+Imported 'GUID: ce97d95af58794dd786eb061adf03c0e' -> (Import Result ID: '5b5c9ada3ff7e260cbb89b030520a0b4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c9f7c75b7301f7ecd909a7d6e1ac8a30 DependenciesID=dd9ed0b1f480559f2cca472f7b4ecfae StaticDependenciesID=7aea565771c17f6cde9a08392ad762d6 
+Importing 'GUID: ce6cc16cb67bd4ccb8c62aab2cb2eb11 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: ce6cc16cb67bd4ccb8c62aab2cb2eb11' -> (Import Result ID: '3f82d9d782f9f815ad808604d50daf78') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=996880a4ea7f4f4e3bfd521705a9e909 DependenciesID=fa63f2630f585409b616e015039b3600 StaticDependenciesID=57aa25be78741c846d58bcbc2763f629 
+Importing 'GUID: 0f000b2d73d9d4c3898c8f9ae8e418e0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.ko.txt' with importer (TextScriptImporter)
+Imported 'GUID: 0f000b2d73d9d4c3898c8f9ae8e418e0' -> (Import Result ID: '97522fff3a4aedafed1eed793b879266') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2494369d5cdc19b9e05f65a2d7ffa7f6 DependenciesID=e9f94aa8fc2624bbc4924fee8b8dbc6e StaticDependenciesID=ef9fcb6ff98e9a468392208fa9b984fa 
+Importing 'GUID: 0fe3cb57a7af648b1a98148fce0c7f43 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 0fe3cb57a7af648b1a98148fce0c7f43' -> (Import Result ID: 'c8beda6c258345c6978704c64bbd887d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=07cb86e1ce897743c2d1b2176768a8b3 DependenciesID=00f404fb55836e724afd5cee7bb5865a StaticDependenciesID=8cf7310dc2f793078907ad66f757208c 
+Importing 'GUID: 0fbd5551a13854b488e25d6d9620a2a2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: 0fbd5551a13854b488e25d6d9620a2a2' -> (Import Result ID: '0429cf65d6b81424f1eb4ab7017cfb8d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=abbb594bdfdd949a849a42f9cdc7cde3 DependenciesID=c43692debaeb55f23696395df79dd5a3 StaticDependenciesID=6171d4a7b1e10fec8ab4a66baeaef277 
+Importing 'GUID: 1fe9e6e1ae93cf64bbdfbd29300752e1 - Path: Packages/com.unity.ide.visualstudio/LICENSE.md' with importer (TextScriptImporter)
+Imported 'GUID: 1fe9e6e1ae93cf64bbdfbd29300752e1' -> (Import Result ID: '66f0eff29cdcb1ccd3dda412eaa3aa83') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4b465b4eb3325e8176f6ebc7d2992a8d DependenciesID=6015dd4cad97599a51a080a36400d918 StaticDependenciesID=fbdb469170f4295dc7d01c9fa68b97a3 
+Importing 'GUID: 4f40ea0bb7cda4e948800fe19ebc97ba - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.en.txt' with importer (TextScriptImporter)
+Imported 'GUID: 4f40ea0bb7cda4e948800fe19ebc97ba' -> (Import Result ID: '6ac191076332eb209ac778455c42849e') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=93572c84b758e52a67ba9f8f1d8ae10e DependenciesID=4f167894a47f808cc60760b2ddd1a32d StaticDependenciesID=311c6d6001061b415be844074b2b89db 
+Importing 'GUID: af6148e219df44419df80632737fc1f2 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/ui-navigation-workflows.md' with importer (TextScriptImporter)
+Imported 'GUID: af6148e219df44419df80632737fc1f2' -> (Import Result ID: 'b48fbfedcc831bb8b9c3761fe9e8445f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b2d623122d56f967c183d644411d7b4a DependenciesID=44cc63e0009d90520263cc59c7a4cf83 StaticDependenciesID=a9b997184bd892c50a0ecf6b890fb517 
+Importing 'GUID: ffc35b34863db4a4783258f1ea2778de - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.es.txt' with importer (TextScriptImporter)
+Imported 'GUID: ffc35b34863db4a4783258f1ea2778de' -> (Import Result ID: '64540d7ffe4f657e7ffeaf660c919f20') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2ed789398011ce1939eff7814fc0a65b DependenciesID=eb8f459826be9f87bebbaf02919d1dcf StaticDependenciesID=20e0ca48fe18aa7224f7bcd84985df21 
+Importing 'GUID: b08f0e8d50a3fae409913b0e5e2006ee - Path: Packages/com.unity.collab-proxy/Editor/Assets/Styles/CommentArea.uss' with importer (ScriptedImporter : UnityEditor.CoreModule:UnityEditor.UIElements.StyleSheets:StyleSheetImporter)
+Imported 'GUID: b08f0e8d50a3fae409913b0e5e2006ee' -> (Import Result ID: 'b67fc8ee87ece33074f3124aebd4f80a') in 0.043 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=57f56227221520db538f8339c2aa207d DependenciesID=1c6a398665c777d65c200eb63bae370f StaticDependenciesID=7f2baf15bba9c6cf4267cd40000b49c9 
+Importing 'GUID: e5f6a7b8c9d0123456789012abcdef05 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Styles/InviteMembersDialog.uss' with importer (ScriptedImporter : UnityEditor.CoreModule:UnityEditor.UIElements.StyleSheets:StyleSheetImporter)
+Imported 'GUID: e5f6a7b8c9d0123456789012abcdef05' -> (Import Result ID: '3a15be54f9b2536907dbc83a0dbd589f') in 0.042 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f095b6985494fa7042110ccae79bcc7e DependenciesID=1dd33c7ed33d4444b4b02708c4f264cf StaticDependenciesID=e35dcf30b30e6aa45c415f4771731704 
+Importing 'GUID: d4e5f6a7b8c9012345678901abcdef04 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Layouts/InviteMembersDialog.uxml' with importer (ScriptedImporter : UnityEditor.UIElementsModule:UnityEditor.UIElements:UIElementsViewImporter)
+Imported 'GUID: d4e5f6a7b8c9012345678901abcdef04' -> (Import Result ID: '2c90c8e8b21101e870fc64da0326a8ee') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5b2481de196af5c3131cc9881dbd667a DependenciesID=dfdffcd2f1d3ed4ca57902fff2899fb3 StaticDependenciesID=b4c215be62b106644a863e69688e57f3 
+
+Asset Pipeline Refresh (id=cba47ceaa1b78e54c9ec0ac68014c785): Total: 18.135 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=134 (actual=132, local cache=2, cache server=0)
+		Asset DB Process Time: managed=12 ms, native=2041 ms
+		Asset DB Callback time: managed=197 ms, native=571 ms
+		Scripting: domain reloads=1, domain reload time=1116 ms, compile time=14167 ms, other=28 ms
+		Project Asset Count: scripts=544, non-scripts=853
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 23.504ms
+	ApplyChangesToAssetFolders: 0.725ms
+	Scan: 330.101ms
+	Collect global state as custom dependencies: 10.928ms
+	CategorizeScriptCompilationAssets: 15.840ms
+	ProcessAssetsWithTransientArtifactChanges: 39.948ms
+	CategorizeAssets: 24.236ms
+	CompileScripts: 14166.749ms
+	ImportOutOfDateAssets: 1505.420ms (769.849ms without children)
+		ImportManagerImport: 720.497ms (203.790ms without children)
+			UpdateCategorizedAssets: 0.595ms
+		UnloadImportedAssets: 0.118ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.249ms
+		ImportSchedulerStart: 14.701ms
+	PostProcessAllAssets: 206.175ms
+		VCAutoAddAssetPostprocess 2.349ms
+		XRBuildSystem.XRAssetImported 0.496ms
+		PostProcessCallbackCreateDeferredMaterials 0.202ms
+		ShaderAssetModifiedCallback 0.194ms
+		RaytracingShaderImportPostprocess 0.174ms
+		ComputeShaderImportPostprocess 0.135ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.124ms
+		SpeedTreeImporter.PostprocessAllAssets 0.115ms
+		AssemblyValidation.PostprocessAllAssets 0.086ms
+		BlockShaderImporter.PostprocessAllAssets 0.085ms
+		MonoPostProcessAllAssets: 195.536ms
+			AssetPostprocessor.OnPostprocessAllAssets 65.101ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 55.370ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 15.801ms
+			SyncVS.PostprocessSyncProject 14.724ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 8.689ms
+			AssetChangedListener.OnPostprocessAllAssets 7.626ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.924ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 2.493ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.213ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 1.174ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 1.074ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.022ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.629ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.475ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.349ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.331ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.272ms
+			AssetEvents.OnPostprocessAllAssets 0.261ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.223ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.215ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.203ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.199ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.195ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.187ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.180ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.131ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.124ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.120ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.094ms
+	PostAssetChangesProfiler: 542.330ms
+	UnloadStreamsBegin: 1.695ms
+	PersistCurrentRevisions: 0.523ms
+	GenerateScriptTypeHashes: 1.474ms
+	GenerateScriptTypeSerializationHashes: 3.307ms
+	Untracked: 1255.018ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 3.955ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-game8
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2616 unused Assets / (0.9 MB). Loaded Objects now: 3343.
+Memory consumption went from 316.1 MB to 315.2 MB.
+Total: 8.859600 ms (FindLiveObjects: 0.295800 ms CreateObjectMapping: 0.100300 ms MarkObjects: 7.231300 ms  DeleteObjects: 0.875600 ms)
+
+[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
+[LAYOUT] About to save layout C:\Users\admin\OneDrive\Documents\Games\game8\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/admin/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[MODES] ModeService[default].InitializeCurrentMode
+[MODES] ModeService[default].RaiseModeChanged(default, default)
+<RI> Initializing input.
+Using Windows.Gaming.Input
+[Project] Loading completed in 29.000 seconds
+	Project init time: 				27.115 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		3.216 seconds
+		Asset Database init time: 		0.836 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			1.615 seconds
+		Unity extensions init time: 	0.010 seconds
+		Asset Database refresh time: 	18.135 seconds
+	Scene opening time: 			1.321 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1794131284791,"processId":37900,"projectLoad":28.999594300000002,"projectInit":27.1146016,"templateInit":0.0,"packageManagerInit":3.2157938,"assetDatabaseInit":0.8361049,"globalIlluminationInit":0.0034852,"assembliesLoad":1.6154678,"unityExtensionsInit":0.0099651,"assetDatabaseRefresh":18.135443,"sceneOpening":1.3209403}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1794131284792,"processId":37900,"editorVersion":"6000.6.8f1 (237b6593792b)","branch":"6000.6/respin/6000.6.8f1-b6138bef9630","buildType":"Release","platform":"Windows"}
+Worker ready: AssetImportWorkerHW0 0
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Created GICache directory at C:/Users/admin/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.019s, timestamps: [30.178 - 30.197]
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "l214fLEd"... (expires: 2026-11-08T10:25:28Z)
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Asset Pipeline Refresh (id=ed914ecaa15c73546a5f34951cb05406): Total: 0.049 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Starting new worker id: 1 with log in C:/Users/admin/OneDrive/Documents/Games/game8/Logs/AssetImportWorkerHW1.log
+[Worker0] Imported GUID: 64115b2476a9040dd93900167c480826 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd67cbc93d58f7bab6c3008a88e7940ad') in 0.0926343 seconds
+Starting new worker id: 2 with log in C:/Users/admin/OneDrive/Documents/Games/game8/Logs/AssetImportWorkerHW2.log
+[Worker0] Imported GUID: 010400789cb24c99a88a6e868095b6cb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/code-review-address.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '478882737e5f2d84ff91427186459e2a') in 0.0054358 seconds
+[Worker0] Imported GUID: 20a3d61d5116042d398e15383ad8bee4 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6ad28c167c3c31c2557bf316dac21db3') in 0.0025536 seconds
+[Worker0] Imported GUID: 2ab1ef0daffb64e60a62a083afbd42b1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/common.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '90bdbf79c932ad49522eb8455b803578') in 0.001868 seconds
+[Worker0] Imported GUID: e3acb1bc94ac44585a423cf7f76f653f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '20d6c2958391247bc299b89afa2a64c3') in 0.0027738 seconds
+[Worker0] Imported GUID: 4b04f1ef35a0b4852839897fbbd7a826 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b32e0520c3f8667d3581863922467446') in 0.0016797 seconds
+[Worker0] Imported GUID: ebd217572ad84c01a93906cecd9a6cc3 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/label-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '608770faa2a448366e664539fe43b843') in 0.0023969 seconds
+[Worker0] Imported GUID: 25af8faf5e3ab497a9bd76e62652101b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bccd577e656d8900513d318d13feccdb') in 0.0024081 seconds
+[Worker0] Imported GUID: 65a51125587384727b85c4eec9bed20e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6ad1afd5b79c2f1d29975728513db60f') in 0.0034601 seconds
+[Worker0] Imported GUID: 220e9325710f4235a43492dd1ee4980d - Path: Packages/com.unity.textmeshpro/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'fef00ea45135364119d6c611be0a0356') in 0.0021308 seconds
+[Worker0] Imported GUID: 71ed39f270ce488db48ba40679226837 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/onboarding-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '85aa20620f8e3268c5eb6e3fa93083c8') in 0.0035115 seconds
+[Worker0] Imported GUID: 05e4a8f4a31da46098006dc87a3c219e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c24259767ff32a1767a37363a6e40c68') in 0.0022524 seconds
+[Worker0] Imported GUID: ffc35b34863db4a4783258f1ea2778de - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4103d99585053907249aa639645ba613') in 0.0017649 seconds
+[Worker0] Imported GUID: 4c9114c594b374bf19b4e25841bf2690 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7cb5c310d62d990871130db7119c11b9') in 0.0017456 seconds
+[Worker0] Imported GUID: 5598b14661b5f4c43bed757f34b6d172 - Path: Packages/com.unity.ide.rider/LICENSE.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f12661546188b45e8bcbec8e40174a5a') in 0.0018533 seconds
+[Worker0] Imported GUID: da5fbb13c6934901a6ae8dba6f20636a - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/code-review-create.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '40f2b65be7d9a217698771804a68ead7') in 0.0016063 seconds
+[Worker0] Imported GUID: 585b5c57b814c4f53846090265480899 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '54375c37aa5e5275834bc89270d6c942') in 0.0018351 seconds
+[Worker0] Imported GUID: edc6fe3642b4b492fa069e5f8c84b127 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd89fd8490fef8ada96b8d809653797bc') in 0.002037 seconds
+[Worker0] Imported GUID: 7b4445ae4bf449b69a0a5ee61068a536 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/checkin-shelve-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '58c2a5124f9f9c2f1d1c8bd924550105') in 0.0018723 seconds
+[Worker0] Imported GUID: eac8fc2893d09496bac8c94bfcc9bd46 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9a15e89944c73f161ccfabe37c49497a') in 0.0018846 seconds
+[Worker0] Imported GUID: 1fe9e6e1ae93cf64bbdfbd29300752e1 - Path: Packages/com.unity.ide.visualstudio/LICENSE.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8a454906524f572d4334761d10ef8ca9') in 0.0016559 seconds
+[Worker0] Imported GUID: 8a82f24fed91b4671960de2fa77d4398 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2810323b0737700a8073ca9e73597da5') in 0.002262 seconds
+[Worker0] Imported GUID: 06764b736fb2b412d96ea21302f7e2d7 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '16c4f305c99a4177cec62b62c34e5a37') in 0.0023582 seconds
+[Worker0] Imported GUID: 91ff7208c07c6411fbe0ce735bde836c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bbef33afbb338f243d5de0ee07b26b3b') in 0.0021829 seconds
+[Worker0] Imported GUID: 3b387a6cdde14551838ac396aacafaa2 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/root-cause-analysis.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9babdf00930e6ae2164ef83fdc02961e') in 0.0017997 seconds
+[Worker0] Imported GUID: 0ba9990c66a354291a758e68fb623812 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '05a55a293c47786ad329f892b0897341') in 0.0018863 seconds
+[Worker0] Imported GUID: 6b25d40a1684441fda32f7ad278f6773 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2bfa6fa92bbd3fcd2b9fa667eec817f9') in 0.00214 seconds
+[Worker0] Imported GUID: 90bedc4df98974e7f81d3234a4a1aff2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e85ebdeaf42471426b57350b9d75ea9b') in 0.0016347 seconds
+[Worker0] Imported GUID: f2333b6fb2b6d446195f6a57fc9793cd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '953c31337b10094e707a7a135ea0e3da') in 0.0021009 seconds
+[Worker0] Imported GUID: 60111d1db1104afea2247bd7dfc76a30 - Path: Assets/_Project/Editor/MainCharacterImportWizard.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '522b58a06795796d859f8009ee20c093') in 0.0279723 seconds
+[Worker0] Imported GUID: 656f74f6edaa396458412b9e3903d8cd - Path: Packages/com.unity.ide.visualstudio/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd412e94c4c9ce958e51aeab030629517') in 0.0020081 seconds
+[Worker0] Imported GUID: 88856b116c7b141f580095c9d97de14f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f09fc9f507e9266e75469a038486962e') in 0.0023956 seconds
+[Worker0] Imported GUID: d4e5f6a7b8c9012345678901abcdef04 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Layouts/InviteMembersDialog.uxml - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '00f6fc0fa2ce1fa4a9477c9e01b29866') in 0.0973376 seconds
+[Worker0] Imported GUID: 5e83f8baac96eaa47bdd9ca781cd2002 - Path: Packages/com.unity.ide.rider/CONTRIBUTING.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '99c6d8b4aaa6408c645f4e33ca7a4618') in 0.0017084 seconds
+[Worker0] Imported GUID: 1c3692f791aad44ea91bbd30154ff16b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cace01f80bf1deb23ed68b5daf8721a2') in 0.0033412 seconds
+[Worker0] Imported GUID: 398a8e5463e7847e6805774e0537843e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7ba698484592db745f709d32104f7c19') in 0.001946 seconds
+[Worker0] Imported GUID: e5f6a7b8c9d0123456789012abcdef05 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Styles/InviteMembersDialog.uss - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3c030876c7663d4c7eaccde5c7eb6cf6') in 0.0300975 seconds
+[Worker0] Imported GUID: af6148e219df44419df80632737fc1f2 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/ui-navigation-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '66d090e8fbd927487768290fb5cab96b') in 0.0019174 seconds
+[Worker0] Imported GUID: 67fde336a66c84ce18bc49b8932e9cf3 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7cdc50882c951053880c71bd9b2151f1') in 0.0019265 seconds
+[Worker0] Imported GUID: 9918edb70f0dd5645b94088925b4e3f7 - Path: Assets/_Project/Editor - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0d1d8f1c6421e9b1f8d5c097b2f5cdc7') in 0.001765 seconds
+[Worker0] Imported GUID: d495fac91c1bb4951997f93de873e3e9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '667b2cf7ab3435fdc2869c6dfef88fec') in 0.0023831 seconds
+[Worker0] Imported GUID: 34377e1611c724574901eb032b70efa0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '65c1453db0cbd0e247646c56fe1ed5f4') in 0.002364 seconds
+[Worker0] Imported GUID: 682cbc1694c234163a142bafbc7b641b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '793ed2416b9e7437f2041f6d820d9971') in 0.0022875 seconds
+[Worker0] Imported GUID: a4c4e9c1a43104d1496393bf3d21f4c1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b6742073e00f8268125f0582f49c4cd5') in 0.0018595 seconds
+[Worker0] Imported GUID: 4f40ea0bb7cda4e948800fe19ebc97ba - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '44516ffbd8c8285ff34228f60ec7cda2') in 0.007617 seconds
+[Worker0] Imported GUID: 4485aad1ea3c437fa0501f15cd52e288 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/SKILL.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '10d38259a8f432775ac90e99858ff3b8') in 0.0021905 seconds
+[Worker0] Imported GUID: c5963e0b0ebae462ba1a9620316c2216 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '68005313e4d523b86edb263f13432a99') in 0.0018604 seconds
+[Worker0] Imported GUID: 764d8575c77af47fa804dcc6fbeb01cb - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6e684366764bda1cb76751675177867f') in 0.001592 seconds
+[Worker0] Imported GUID: b9904df168220490a9a8acd80138f629 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f2d0e87ee58e1e9f0877ce8fcae42042') in 0.0020315 seconds
+[Worker0] Imported GUID: 61f04d3f5f24b4a509f6e3e9bae7d26b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '752415f7b8e3fb0dbf98e65ca603105b') in 0.0018465 seconds
+[Worker0] Imported GUID: a458e3e9811f5476ba2e0455e0d83321 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f58a3c95492df0b1f2f49f2d150a9ed5') in 0.001745 seconds
+[Worker0] Imported GUID: cbe6bc33c17c246ac8ffb0ee71eb5dfa - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b45e6d4a96d3ce8048e6b663c97a121c') in 0.0018586 seconds
+[Worker0] Imported GUID: b08f0e8d50a3fae409913b0e5e2006ee - Path: Packages/com.unity.collab-proxy/Editor/Assets/Styles/CommentArea.uss - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1d4953e0562d9a41f698094ac68d4990') in 0.0040915 seconds
+[Worker0] Imported GUID: ce97d95af58794dd786eb061adf03c0e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '63a21783812cf3f3e63ed7ded28f71e3') in 0.0020355 seconds
+[Worker0] Imported GUID: 7ec9a0860faab451797ae823a1c1f512 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b0f64c15b94c3aaf4697aaab3ee37859') in 0.0018422 seconds
+[Worker0] Imported GUID: 76e4c883524c841d7ad60032db468122 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2118587466d913de08366cc13c3d934e') in 0.0018259 seconds
+[Worker0] Imported GUID: 7e24b663c0eb4b269d3ca1f0d22790eb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/merge-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b38989ea0d344f66fda667140dbaa111') in 0.0023411 seconds
+[Worker0] Imported GUID: 9bff32140d1498a4a9f6f18b09e8959c - Path: Packages/com.unity.collab-proxy/Third Party Notices.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '78ea2b9423c151711e41ba1b46606440') in 0.0020864 seconds
+[Worker0] Imported GUID: a7b24b5f4a0b4dd3a9edba3dd667d201 - Path: Assets/_Project/Scripts/EclipseFrontierGame.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1bb5960a2b405d85ec199725b37d8e2c') in 0.0016925 seconds
+[Worker0] Imported GUID: 132f2d5191aee4056b0e82dc34bf56af - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '51efaaaad2d6a071cafa8ac2ed0b4f68') in 0.0024564 seconds
+[Worker0] Imported GUID: 48352914d6fea4b74b6b7d9755e18afe - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6e6219672cf12bf975a1a390e1c990ad') in 0.0043608 seconds
+[Worker0] Imported GUID: 9cc30c82b6595438899ea11370813817 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f1ad24b2578738c2186bb9a542ee8663') in 0.0019855 seconds
+[Worker0] Imported GUID: f95542db51d344cd2b65c52cc55be86e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0a47f2c437126aa397bf460f7be64624') in 0.0036619 seconds
+[Worker0] Imported GUID: c410ee31b62e84a4eb7b800bce1e9b37 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '80510dc690b2a7ce3a65b28002b1397f') in 0.0018848 seconds
+[Worker0] Imported GUID: 86a8aa74abaf94d05ae56976eba276ec - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd6fce271472b2296d8cd13f8e71219e9') in 0.0023384 seconds
+[Worker0] Imported GUID: f5e94de8cdbf42538ec918b8ef3c5ceb - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/data-model.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c6fd5f329f17d47f884c115f72d7e88d') in 0.0020536 seconds
+[Worker0] Imported GUID: 6d9433f04c2f24ccfb821081740abb62 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'aa36399baa4775e86503873fff4ef5ad') in 0.0022663 seconds
+[Worker0] Imported GUID: ae8e2d51a70f4c7c8850ee7fba1bb390 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/diff-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '953cb18b65da3d3a376e8c0b8099d332') in 0.0022132 seconds
+[Worker0] Imported GUID: c1082c3e86982497f802edc1043c6084 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4bd9718479f37577fe6be6e6188e2ba1') in 0.0018722 seconds
+[Worker0] Imported GUID: 4bdac13a0e954013b856627b0a84e22e - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/ignore-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b681f31ed7f59a0f9338f61ac7726b7b') in 0.0019217 seconds
+[Worker0] Imported GUID: 93298c6fcbff047f8aca0c4c8420f143 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlast@2x.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '97b43fa40a924558057a016af731c467') in 0.0820442 seconds
+[Worker0] Imported GUID: c295ba332bedf45bdb1c588f8a345082 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '02a794dea39c197711828cbe3e8361a9') in 0.0020429 seconds
+[Worker0] Imported GUID: d925d1074d7e4f138ca54cf8415aa323 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/branch-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '88a6da49ae1c8e11d7c172eb24a206da') in 0.0018202 seconds
+[Worker0] Imported GUID: 6022bdd5b2896a54f94123b812705321 - Path: Packages/com.unity.ide.visualstudio/CHANGELOG.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '66700b2c9936739ffd23b74bba1cc8ea') in 0.0019383 seconds
+[Worker0] Imported GUID: 0327c5b1354224ebb9e88fc3db5b3ada - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4e4ac4aafe858325fd657fb889f5f650') in 0.004794 seconds
+[Worker0] Imported GUID: dc9f2fde24d74ff78046602ce6dff758 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/lock-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c1ae40e732eb5ab8773009ef2cd68fad') in 0.0019592 seconds
+[Worker0] Imported GUID: a9cf5a99d9904821959440ad1613d916 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/file-history-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '745eb20fb6b8cbb8d6df79018a4bea4e') in 0.0019315 seconds
+[Worker0] Imported GUID: 315a8aa8d12f4c09b9e53ea4f12e21bf - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/query-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f5f46479555090975f2fde3141dd46de') in 0.0045204 seconds
+[Worker0] Imported GUID: 1634345fddac94db799d19f3dde68bc9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0555125fd126b1be05fd410f54f4bf6a') in 0.0023316 seconds
+[Worker0] Imported GUID: 66c95bb3c74257f41bae2622511dc02d - Path: Packages/com.unity.ide.rider/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '71e6272f7879e5260d42d1e2d31b33ed') in 0.0016245 seconds
+[Worker0] Imported GUID: ce6cc16cb67bd4ccb8c62aab2cb2eb11 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9b61943ad0d75279a6c8e33dbcdd2391') in 0.0018598 seconds
+[Worker0] Imported GUID: b1743f61aa8a840b4b6ce60a39b631da - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '72387c138ed6d5d46936cdfcdbfcd0fc') in 0.0032479 seconds
+[Worker0] Imported GUID: 6cf6f311a588243059b293d648cbe7a9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4c0cde1e823ad6dd57d87474134fa7e1') in 0.0022542 seconds
+[Worker0] Imported GUID: 8645aa9c3c74fb34ba9499e14fb332b5 - Path: Packages/com.unity.ide.rider/CHANGELOG.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bea8f77b52441367603e00ae2dad98d5') in 0.0023026 seconds
+[Worker0] Imported GUID: 26561e13ba42d4f64bf125200637a94f - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b0e0f75dc73ad38d40a98f76c6e7acf1') in 0.0020046 seconds
+[Worker0] Imported GUID: d47232c866714824b686affeb7c6db5e - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/undo-revert-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f6748ad4d9e71f9c1065d10a70ff95fd') in 0.0023308 seconds
+[Worker0] Imported GUID: e6b7483d9dc934870ac16e92f6d90852 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/guihelp.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3b328ba41fdd02bf7fb2354f556ed50e') in 0.0022952 seconds
+[Worker0] Imported GUID: 960158b55bcb644a5b70fff280a781af - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7d9c3ca1fbb4a0ae767444710a6af788') in 0.0034027 seconds
+[Worker0] Imported GUID: 353c9a121987948b9b6f79be926c535a - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4935dda00a7581f8a3148296f99f9583') in 0.0019667 seconds
+[Worker0] Imported GUID: bb2a6b8e790774da7b0a51cd1a28dca1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6df7fe6a4fc9913d4023f9ea14ef3d85') in 0.0026079 seconds
+[Worker0] Imported GUID: a994733912fae4c62976079886dacd4d - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4ca23a1f016f9eda29068d37b12a4235') in 0.0020473 seconds
+[Worker0] Imported GUID: d3ca5a7ed155446b4bcc1e084a9d15fd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/i3.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7e243c311e0500850bed4623a883f76a') in 0.0018916 seconds
+[Worker0] Imported GUID: b00873b178b4a4802a1138b9b904a4d3 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconunityproject@2x.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1ce1dd9bbc2392d546df7a5af3131bbe') in 0.0065919 seconds
+[Worker0] Imported GUID: 63b7b969d64304c77926a890e305c83b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/semantic.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b3ecea30543a31bdfcb9ea3980b6562d') in 0.0038222 seconds
+[Worker0] Imported GUID: 027b9fcb077b24ff7a5d791b557050ba - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/commontypes.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bcd3bc39f6f148cf1a1d189f48c2d6a9') in 0.0021947 seconds
+[Worker0] Imported GUID: 0f000b2d73d9d4c3898c8f9ae8e418e0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd7a7cf9ce8910a5fb8f193f2e176ee2d') in 0.0024813 seconds
+[Worker0] Imported GUID: 80291a4e9abdf4cd0bfadf2a982fb864 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.ko.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2ab37a91bdef4a5819ca537124c0a505') in 0.002122 seconds
+[Worker0] Imported GUID: 4404e800a61914f739e4ff241918f606 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a459bae98ff598ee2a674239c2480ea4') in 0.0019454 seconds
+[Worker0] Imported GUID: bb38e05f2f80c423cb2ee0e568aecbc5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1b611bbea6094e04e7590c6f601eb4f2') in 0.0019372 seconds
+[Worker0] Imported GUID: 00bfe929205f54a9bab375cde9fd56f5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '398f357b0f3d2d605625c61d732f0645') in 0.0020782 seconds
+[Worker0] Imported GUID: 989a92435cb9845e589778ec8f4fd33c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ab1d1f3f98abef0a26946ec476a587a0') in 0.0022007 seconds
+[Worker0] Imported GUID: 3adc465f3b7df4a29ad5554493587fcc - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6072c37876eb3efc5fbb8ee8743b3ef4') in 0.0018167 seconds
+[Worker0] Imported GUID: 47777d81697d65f45befb6ccd55b2324 - Path: Packages/com.unity.collab-proxy/CHANGELOG.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd06e796a612edb63ad7d3c2af59b5fd9') in 0.0020923 seconds
+[Worker0] Imported GUID: 4080b8724d6184c0491b783c26826d58 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '91c645f3bd21054d9016c36b63b32415') in 0.0026854 seconds
+[Worker0] Imported GUID: e2240734f45a34c139e99ae6b6bf5a70 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0588df5d8c8cbef872fc31b984abdfb9') in 0.002687 seconds
+[Worker0] Imported GUID: 2af16183ba18446f1a808cc5928b80f6 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2d5f304d2d30128fecaef6e100034378') in 0.0024987 seconds
+[Worker0] Imported GUID: 7e5963ce065a04e76b46cc0592dc98e7 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f1af2734e863fba209fec1642a830397') in 0.0018722 seconds
+[Worker0] Imported GUID: 89425210677b241ed9877501fbf6f240 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'becd84998dafbe70fde4cf650d768643') in 0.0030535 seconds
+[Worker0] Imported GUID: c85b40db2caf143ceafa56767450fa11 - Path: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconunityproject.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2b776c3ed4f8aa21a7de7e4b8c8008c3') in 0.0075276 seconds
+[Worker0] Imported GUID: 9721b402f8ae458ab0143dc17a9abd02 - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/tool-reference.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ba7224842ff213e9d0befa71ba883a4f') in 0.0023592 seconds
+[Worker0] Imported GUID: 0fe3cb57a7af648b1a98148fce0c7f43 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/plastic-gui.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6a8a1440822e70359944584969186b17') in 0.0020276 seconds
+[Worker0] Imported GUID: 788fbcfc0abc6c54b9504cfee3176c22 - Path: Packages/com.unity.ide.visualstudio/ValidationExceptions.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '00c84942d431916dc0217fba7a573abd') in 0.0015311 seconds
+[Worker0] Imported GUID: 408f175592eca4bb1ac7f9ff36587dd9 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '26c8a6a5d2d9f716a592aab3480109d1') in 0.0019587 seconds
+[Worker0] Imported GUID: 184a1c940f6324dc4aa662247e4bc7c6 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/xdiff.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2fbafad6d3dd4df81bd65e9359939275') in 0.0021403 seconds
+[Worker0] Imported GUID: 6cd4994526f54c9d8ba76a1d914f1a1b - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/annotate-workflows.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '88124b5ecadadf26d0ca8c8fdb24a2c7') in 0.0022419 seconds
+[Worker0] Imported GUID: 6a652c95b7bbb49afaa72cf9ca612753 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.ja.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '26808a3275967ebb60075747389cce87') in 0.0018625 seconds
+[Worker0] Imported GUID: c889c90b320244d2da78494389489c4b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/common.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e8e473c69aa93158c1f1580dc9d3cac2') in 0.0017277 seconds
+[Worker0] Imported GUID: 4a0af4e4bd28f436b9c48e3063d25de1 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7e44aeba65323ab8bc945bb561b0e8c2') in 0.0017168 seconds
+[Worker0] Imported GUID: 179c67b17726147a98486e04cfa9bac5 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '31d46490fcffe2e15d158c8c0319489b') in 0.0020698 seconds
+[Worker0] Imported GUID: 1bf9fa9553af7475c87ad89dc57d4880 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/mergetool.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c259ff0cb6c03a93bc81bcc0eb8c131f') in 0.0017142 seconds
+[Worker0] Imported GUID: 05a3a19e2aee44b95b8881bc4dbe5596 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6d94de6f7cff7595d4ffed68679abd6e') in 0.0016488 seconds
+[Worker0] Imported GUID: e13839fd5a39d4d1283be7279d68160c - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0f5cb2e96686eb815bb7a0e4563abf5a') in 0.0018079 seconds
+[Worker0] Imported GUID: 0fbd5551a13854b488e25d6d9620a2a2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/differences.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7a2fa95db49286d7e542a518f386e7c0') in 0.0024255 seconds
+[Worker0] Imported GUID: 8186ab7f8464a437492ad228835db228 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/workspaceserver.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'eba47433548b4fb241e8915136d882dc') in 0.0018206 seconds
+[Worker0] Imported GUID: 743fda8c4b219c8429fb5a77ede1c879 - Path: Packages/com.unity.collab-proxy/package.json - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f015bd9cbbabfc326e374669f40d37f6') in 0.0023026 seconds
+[Worker0] Imported GUID: 08f8b5169c88e4ca9a290aee1c944644 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/basecommands.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b5b91b82e5139b711e4fb4e33c837296') in 0.0015572 seconds
+[Worker0] Imported GUID: a7d830eb57b94c14b2cc26ee9cc31ecc - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/clickable-links.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a96e2a725b79cadd2f6824b01d9448a0') in 0.0016987 seconds
+[Worker0] Imported GUID: 5a5ba6b1f19cd4721ab8b72e92df3f49 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm-help.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5d27ca2cdb4bcf87e8a782a67e8852b0') in 0.0018577 seconds
+[Worker0] Imported GUID: 70b6b01df577b45c7b9e65912b8c1d7e - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/images.es.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6775dfafc206910ee49800e6669ef6cd') in 0.007347 seconds
+[Worker0] Imported GUID: 78ffcf86c37e64163ad74ed8322911c2 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5dc93cda91285592c124b9f46072c7be') in 0.0019312 seconds
+[Worker0] Imported GUID: 1d5aaaa1da7e54bf69a4b3fec47d59fd - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/cm.en.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2cfe43d909ec6dd0ccc960e1c4ae43c1') in 0.0017322 seconds
+[Worker0] Imported GUID: 965ae256fd2947198b4671264e59e84f - Path: Packages/com.unity.collab-proxy/AIAssistantSkills/unity-version-control/references/query-syntax.md - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4bc7e5bc29f3b7546a0f76236450197c') in 0.0017839 seconds
+[Worker0] Imported GUID: a40c91a4a00e949db8bd5361a1a5f2d0 - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/configurehelper.zh-Hans.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bdb0c63e5d5edd0e496e8163c8f98a32') in 0.002374 seconds
+[Worker0] Imported GUID: cb67edc1800c2ec4ba8dfb1cf0dfc84a - Path: Packages/com.unity.ide.visualstudio/Editor/COMIntegration/Release/COMIntegration.exe - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5649ca9a961bd65c5c7a3db7b0a9a7b3') in 0.0016377 seconds
+[Worker0] Imported GUID: 1e6e493582b3d41b9adcbd539dd9611b - Path: Packages/com.unity.collab-proxy/Lib/Editor/Localization/clientcommon.zh-Hant.txt - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'a936509b8b201061413adc550449572e') in 0.0015482 seconds
+Worker ready: AssetImportWorkerHW1 1
+Worker ready: AssetImportWorkerHW2 2
+[Worker2] Imported GUID: 6c55934a0b55498d9c70787b65ba1fe3 - Path: Assets/_Project/Scenes/Veilwood.unity - Importer: PreviewImporter -> (ImportResultId: 'c7a9425d8f8e5177d9a11d10b9cc8f39') in 0.0714875 seconds
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.326 seconds
+Domain Reload Profiling: 2056ms
+	BeginReloadAssembly (512ms)
+		DisableScriptedObjects (90ms)
+		CreateAndSetChildDomain (270ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (140ms)
+		LoadAssemblies (123ms)
+		TypeCache.Refresh (8ms)
+		AnalyzeDomain (3ms)
+	FinalizeReload (1327ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (259ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (7ms)
+		AwakeInstancesAfterBackupRestoration (554ms)
+No restricted APIs configured; Validation skipped.
+Checking 9 assemblies for restricted APIs found 0 usage(s) in 5 ms
+
+Asset Pipeline Refresh (id=fff5874684f3ab34c870bffc8aeadb00): Total: 2.752 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1440 ms
+		Asset DB Callback time: managed=280 ms, native=145 ms
+		Scripting: domain reloads=1, domain reload time=882 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=544, non-scripts=853
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 3.823ms
+	ApplyChangesToAssetFolders: 0.139ms
+	Collect global state as custom dependencies: 2.924ms
+	ProcessAssetsWithTransientArtifactChanges: 53.202ms
+	CategorizeAssets: 7.625ms
+	CompileScripts: 2.486ms
+	ImportOutOfDateAssets: 1336.055ms (1332.418ms without children)
+		UnloadImportedAssets: 2.454ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.255ms
+		ImportSchedulerStart: 0.920ms
+	PostProcessAllAssets: 409.719ms
+		PostProcessCallbackCreateDeferredMaterials 5.757ms
+		PostprocessAssetsUpdateCachedIcon 5.105ms
+		AssemblyValidation.PostprocessAllAssets 4.840ms
+		ShaderAssetModifiedCallback 2.600ms
+		RaytracingShaderImportPostprocess 2.346ms
+		ComputeShaderImportPostprocess 1.995ms
+		SpeedTreeImporter.PostprocessAllAssets 1.692ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 1.049ms
+		BlockShaderImporter.PostprocessAllAssets 0.964ms
+		XRBuildSystem.XRAssetImported 0.484ms
+		MonoPostProcessAllAssets: 277.394ms
+			SyncVS.PostprocessSyncProject 191.421ms
+			AssetPostprocessor.OnPostprocessAllAssets 17.287ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 11.360ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 11.272ms
+			AssetChangedListener.OnPostprocessAllAssets 8.378ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 7.102ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.988ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 5.172ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.187ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.300ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.867ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.459ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.421ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.290ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.288ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.266ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.262ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.236ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.216ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.203ms
+			AssetEvents.OnPostprocessAllAssets 0.187ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.185ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.161ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.144ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.127ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.097ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.084ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.069ms
+	PostAssetChangesProfiler: 15.657ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.354ms
+	UnloadStreamsBegin: 2.584ms
+	GenerateScriptTypeHashes: 0.623ms
+	GenerateScriptTypeSerializationHashes: 1.414ms
+	Untracked: 912.713ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.367 ms
+	Integration:            112.325 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   113.707 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+TrimDiskCacheJob: Current cache size 0mb
+Asset Pipeline Refresh (id=be707500d1f5f674fa3587b62498e6ee): Total: 0.017 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.075 ms
+	Integration:            22.910 ms
+	Integration of assets:  0.006 ms
+	Thread Wait Time:       0.037 ms
+	Total Operation Time:   24.028 ms
+Unloading 2430 unused Assets / (19.1 MB). Loaded Objects now: 4480.
+Memory consumption went from 0.50 GB to 496.7 MB.
+Total: 19.558300 ms (FindLiveObjects: 2.114100 ms CreateObjectMapping: 0.200100 ms MarkObjects: 12.398100 ms  DeleteObjects: 4.629900 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.80 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.327 seconds
+Domain Reload Profiling: 2048ms
+	BeginReloadAssembly (503ms)
+		DisableScriptedObjects (80ms)
+		CreateAndSetChildDomain (264ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (136ms)
+		LoadAssemblies (122ms)
+		TypeCache.Refresh (5ms)
+		AnalyzeDomain (3ms)
+	FinalizeReload (1328ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (241ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
+			AfterProcessingInitializeOnLoad (7ms)
+		AwakeInstancesAfterBackupRestoration (536ms)
+
+Asset Pipeline Refresh (id=a4da4a7e50241ab40af8b9ee4fb86294): Total: 2.281 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1399 ms
+		Asset DB Callback time: managed=25 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=852 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=544, non-scripts=853
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 2.271ms
+	ApplyChangesToAssetFolders: 0.101ms
+	Collect global state as custom dependencies: 2.623ms
+	ProcessAssetsWithTransientArtifactChanges: 0.124ms
+	CategorizeAssets: 8.886ms
+	CompileScripts: 2.253ms
+	ImportOutOfDateAssets: 1336.093ms (1335.053ms without children)
+		UnloadImportedAssets: 0.209ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.308ms
+		ImportSchedulerStart: 0.515ms
+	PostProcessAllAssets: 25.576ms
+		MonoPostProcessAllAssets: 25.572ms
+			AssetPostprocessor.OnPostprocessAllAssets 17.287ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 11.272ms
+			SyncVS.PostprocessSyncProject 10.729ms
+			AssetChangedListener.OnPostprocessAllAssets 8.378ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 7.102ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.988ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.829ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.300ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.691ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.586ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.459ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.421ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.290ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.266ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.262ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.236ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.222ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.222ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.216ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.203ms
+			AssetEvents.OnPostprocessAllAssets 0.187ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.185ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.133ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.127ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.118ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.097ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.069ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.069ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.098ms
+	UnloadStreamsBegin: 1.212ms
+	GenerateScriptTypeHashes: 0.689ms
+	GenerateScriptTypeSerializationHashes: 1.569ms
+	Untracked: 889.580ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.501 ms
+	Integration:            86.440 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.094 ms
+	Total Operation Time:   87.036 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Asset Pipeline Refresh (id=08d8e6f2b8328cb4bbe9b223f790e1e1): Total: 0.019 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ed7de56325da10443867461f825bfb2a): Total: 0.007 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=748d0d85f2b6e74469023ee4fd72306a): Total: 0.011 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Worker2] Imported GUID: 9918edb70f0dd5645b94088925b4e3f7 - Path: Assets/_Project/Editor - Importer: PreviewImporter -> (ImportResultId: '9596ae60d36ae9ba06cd45fb8d72332e') in 0.1054049 seconds
+[Worker2] Imported GUID: 60111d1db1104afea2247bd7dfc76a30 - Path: Assets/_Project/Editor/MainCharacterImportWizard.cs - Importer: PreviewImporter -> (ImportResultId: 'b23e3fa28f7f85bf2cf9c658815dc542') in 0.0012782 seconds
+[Licensing::Client] Successfully resolved entitlement details
+
+Asset Pipeline Refresh (id=b253451990121f147890c1f36edf2699): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+MonoPathRemapper: Attempts to remap: 20497; Successful remaps: 10250
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout C:\Users\admin\OneDrive\Documents\Games\game8\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/admin/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-admin-1.18.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-admin-1.18.3 channel disconnected successfully.
+Shut down.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 00000000000064B0, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007D6C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000064B0, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007D6C, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 5400
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1794131696787,"processId":37900,"allocatedMemory":14152852,"memoryLabels":[{"Default":198559},{"Permanent":15516},{"NewDelete":71113},{"Thread":4210816},{"Manager":37312},{"VertexData":8},{"Geometry":824},{"Texture":24},{"Shader":846016},{"Material":132},{"GfxDevice":221992},{"GfxThread":18432},{"Animation":952},{"Audio":120},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":134344},{"Input":45280},{"JobScheduler":256},{"TextLib":46406},{"Mono":48},{"ScriptingNativeRuntime":1243496},{"BaseObject":50128},{"Resource":1444},{"Renderer":2504},{"Transform":4781},{"File":16292},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":833118},{"StaticString":3808},{"Utility":2676050},{"Curl":48},{"PoolAlloc":2168},{"AI":80},{"TypeTree":14869},{"ScriptManager":25312},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7872},{"WebRequest":6862},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":1620},{"Camera":1425},{"Secure":265},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"EntityIdStore":33088},{"Gui":268018},{"EditorUtility":268297},{"VersionControl":8},{"Undo":931},{"AssetDatabase":2326008},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36921},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"Licensing":696},{"AssetReference":32},{"IPCStream":32}]}
