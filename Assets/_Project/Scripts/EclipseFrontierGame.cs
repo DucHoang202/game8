@@ -10,7 +10,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Bootstrap()
     {
-        if (FindObjectOfType<EclipseFrontierGame>() == null)
+        if (FindAnyObjectByType<EclipseFrontierGame>() == null)
             new GameObject("Eclipse Frontier").AddComponent<EclipseFrontierGame>();
     }
 
@@ -77,7 +77,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             flask.localScale = shaking ? new Vector3(.12f,.27f,.12f) : Vector3.zero;
             flask.localPosition = shaking ? new Vector3(.35f,.62f,.25f) : new Vector3(.52f,.18f,.02f);
             flask.localRotation = Quaternion.Euler(0, 0, shaking ? Mathf.Sin(Time.time * 42f) * 32f : 0);
-            if (!actionAnimating) player.localScale = shaking ? new Vector3(.72f,.68f,.72f) : new Vector3(.72f,1.12f,.72f);
+            if (!actionAnimating) player.localScale = shaking ? new Vector3(1f,.62f,1f) : Vector3.one;
             if (!actionAnimating) player.position = new Vector3(player.position.x, shaking ? .68f : 1.12f, player.position.z);
         }
         bool roaming = screen == GameScreen.Explore || (screen == GameScreen.Combat && enemy != null && enemy.Title == "Eclipse Boss");
@@ -147,7 +147,31 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             var crystal = MakePrimitive(PrimitiveType.Sphere, "Essence crystal", new Vector3(x, .35f, z), new Vector3(.25f, .7f, .25f), new Color(.58f, .28f, .95f), worldRoot);
             crystal.transform.rotation = Quaternion.Euler(0, i * 31, 12);
         }
-        player = MakePrimitive(PrimitiveType.Capsule, "Wayfarer", playerPosition, new Vector3(.72f, 1.12f, .72f), new Color(.45f, .75f, .85f), worldRoot).transform;
+        player = new GameObject("Wayfarer").transform;
+        player.SetParent(worldRoot); player.position=playerPosition;
+        GameObject characterPrefab=Resources.Load<GameObject>("PlayerCharacter");
+        if(characterPrefab!=null)
+        {
+            GameObject model=Instantiate(characterPrefab,player);
+            model.name="Imported Main Character";
+            model.transform.localPosition=Vector3.zero; model.transform.localRotation=Quaternion.identity; model.transform.localScale=Vector3.one;
+            Renderer[] renderers=model.GetComponentsInChildren<Renderer>(true);
+            if(renderers.Length>0)
+            {
+                Bounds bounds=renderers[0].bounds;
+                for(int i=1;i<renderers.Length;i++) bounds.Encapsulate(renderers[i].bounds);
+                float fit=2.24f/Mathf.Max(.01f,bounds.size.y);
+                float localFootOffset=(bounds.min.y-player.position.y)*fit;
+                model.transform.localScale=Vector3.one*fit;
+                model.transform.localPosition=new Vector3(0,-1.12f-localFootOffset,0);
+            }
+        }
+        else
+        {
+            var fallback=MakePrimitive(PrimitiveType.Capsule,"Wayfarer · fallback",playerPosition,new Vector3(.72f,1.12f,.72f),new Color(.45f,.75f,.85f),worldRoot);
+            fallback.transform.SetParent(player,true); fallback.transform.localPosition=Vector3.zero;
+            var collider=fallback.GetComponent<Collider>(); if(collider!=null)Destroy(collider);
+        }
         MakePrimitive(PrimitiveType.Sphere, "Wayfarer aura", playerPosition + Vector3.up * 1.1f, new Vector3(.2f,.2f,.2f), new Color(.7f,.4f,1), player);
         flask = MakePrimitive(PrimitiveType.Cylinder, "Empty flask", playerPosition + new Vector3(.55f,.3f,.05f), Vector3.zero, new Color(.25f,.77f,.85f), player).transform;
         flask.localPosition = new Vector3(.52f,.18f,.02f);
@@ -277,6 +301,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     }
     private void DrawCombat(float w,float h)
     {
+        if(enemy.Title=="Eclipse Boss") { DrawBossCombat(w,h); return; }
         Box(new Rect(0,66,w,h-66),new Color(.025f,.025f,.05f,.71f));
         float pw=760, px=(w-pw)/2, py=95;
         Box(new Rect(px,py,pw,120),new Color(.045f,.05f,.085f,.96f));
@@ -315,6 +340,35 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         Text(new Rect(px+14,ay+90,pw-28,20),"FIELD LOG   /   "+combatLog,mutedStyle);
         if(enemy.Title=="Eclipse Boss") Text(new Rect(px+14,ay+111,pw-28,18),"WASD / ARROWS / LEFT STICK  ·  RUN THROUGH THE ARENA",mutedStyle);
         Button(new Rect(w-190,h-48,165,30),"RETREAT",()=>Finish(false),new Color(.24f,.18f,.2f));
+    }
+    private void DrawBossCombat(float w,float h)
+    {
+        float x=22,y=82;
+        Box(new Rect(x,y,322,126),new Color(.035f,.04f,.07f,.82f));
+        Text(new Rect(x+14,y+8,294,22),"ECLIPSE BOSS  ·  HOLLOW STAG",smallStyle);
+        Text(new Rect(x+14,y+32,294,22),$"ESSENCE   {enemy.Essence:0} / {enemy.Max:0}",labelStyle);
+        Bar(new Rect(x+14,y+57,294,9),enemy.Essence/enemy.Max,new Color(.65f,.32f,.84f));
+        Text(new Rect(x+14,y+72,150,20),$"TIMER   {timer:0}s",smallStyle);
+        Bar(new Rect(x+14,y+99,294,9),timer/timerMax,new Color(.95f,.47f,.28f));
+        Text(new Rect(x+169,y+72,139,20),$"RESIST   {enemy.Resistance:P0}",mutedStyle);
+
+        float right=w-306, ry=82, rh=57+party.Count*26;
+        Box(new Rect(right,ry,284,rh),new Color(.035f,.04f,.07f,.82f));
+        Text(new Rect(right+13,ry+8,258,20),$"TEAM   {TotalEssence():0} / {TotalCapacity():0}",smallStyle);
+        for(int i=0;i<party.Count;i++)
+        {
+            Member m=party[i]; float cy=ry+32+i*26;
+            Text(new Rect(right+13,cy,104,18),m.Name,mutedStyle);
+            Bar(new Rect(right+118,cy+4,151,8),m.Essence/m.Capacity,new Color(.55f,.32f,.79f));
+        }
+
+        float panelWidth=760, panelX=(w-panelWidth)/2, actionY=h-104, bw=232, gap=20;
+        Box(new Rect(panelX,h-139,panelWidth,28),new Color(.035f,.04f,.07f,.68f));
+        Text(new Rect(panelX+10,h-136,panelWidth-20,22),combatLog,mutedStyle);
+        ActionButton(new Rect(panelX,actionY,bw,66),"EMPTY FLASK","10 sec  ·  kneel, shake, extract",DrinkAndExtract,new Color(.33f,.19f,.47f,.92f));
+        ActionButton(new Rect(panelX+bw+gap,actionY,bw,66),"AERIAL RUNE STRIKE","15 sec  ·  leap onto armor, strike rune",MountedStrike,new Color(.48f,.2f,.28f,.92f));
+        ActionButton(new Rect(panelX+(bw+gap)*2,actionY,bw,66),"GROUNDING SHOVE","3 sec  ·  break stance, gain 5 sec",GroundingShove,new Color(.22f,.26f,.38f,.92f));
+        Button(new Rect(w-190,h-35,165,26),"RETREAT",()=>Finish(false),new Color(.24f,.18f,.2f,.88f));
     }
     private void Bar(Rect r,float ratio,Color color) { Box(r,new Color(.15f,.15f,.2f)); Box(new Rect(r.x,r.y,r.width*Mathf.Clamp01(ratio),r.height),color); }
     private void ActionButton(Rect r,string title,string description,Action action,Color color)
@@ -405,7 +459,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             player.position=Vector3.Lerp(target,origin,a)+Vector3.up*Mathf.Sin((1-a)*Mathf.PI)*.8f;
             yield return null;
         }
-        player.position=origin; player.localScale=new Vector3(.72f,1.12f,.72f);
+        player.position=origin; player.localScale=Vector3.one;
         bossRoot.localRotation=Quaternion.identity; actionAnimating=false;
     }
     private void GroundingShove()
@@ -423,11 +477,11 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         for(int i=0;i<3;i++)
         {
             float t=0;
-            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*Mathf.Clamp01(t/.18f)); player.localScale=new Vector3(.72f,.72f,.72f); yield return null; }
+            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*Mathf.Clamp01(t/.18f)); player.localScale=new Vector3(1f,.7f,1f); yield return null; }
             t=0;
             while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*(1-Mathf.Clamp01(t/.18f))); yield return null; }
         }
-        player.position=origin; player.localScale=new Vector3(.72f,1.12f,.72f); actionAnimating=false;
+        player.position=origin; player.localScale=Vector3.one; actionAnimating=false;
     }
     private bool Spend(float cost)
     {
