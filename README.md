@@ -4,11 +4,11 @@ Prototype based on `text.txt`. The project targets Unity 6 and builds its 3D for
 
 ## Run
 
-1. Open this folder in Unity Hub using Unity `6000.0.35f1` or a compatible Unity 6 editor.
+1. Open this folder in Unity Hub using Unity `6000.3.28f1` or a compatible Unity 6.3 editor.
 2. Open `Assets/_Project/Scenes/Veilwood.unity`.
 3. Press Play.
 
-Use **WASD** or the arrow keys to explore. Choose an encounter from the panel on the right. Selecting the Hollow Stag transports the Wayfarer to its own 3D arena; movement remains enabled during this boss encounter. In combat, use **Extract**, **Shake Flask** (a brief kneeling animation), **Defend**, and **Burst**. The action timer only decreases when an action is taken; gathered Essence converts into Gold, EXP, and Legacy Essence. Accumulate 100 Legacy Essence to create a Mini Clone. Progress is saved locally with PlayerPrefs.
+Movement uses Unity's Input System package (`1.20.1`), with WASD, arrow-key, and gamepad left-stick bindings. Choose an encounter from the panel on the right. Selecting the Hollow Stag transports the Wayfarer to its own 3D arena; movement remains enabled during this boss encounter. Combat has three actions: **Empty Flask** (kneel and shake out the last Essence), **Aerial Rune Strike** (vault onto the boss's armor as it topples onto its back), and **Grounding Shove** (a low forward-and-back guard break). The action timer only decreases when an action is taken; gathered Essence converts into Gold, EXP, and Legacy Essence. Accumulate 100 Legacy Essence to create a Mini Clone. Progress is saved locally with PlayerPrefs.
 
 ## Prototype scope
 

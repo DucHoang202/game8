@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>Self-bootstrapping Eclipse Frontier vertical slice. Open any scene and press Play.</summary>
 public sealed class EclipseFrontierGame : MonoBehaviour
@@ -19,7 +21,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     private readonly List<Member> party = new List<Member>();
     private GameScreen screen = GameScreen.Explore;
     private Enemy enemy;
-    private float timer, timerMax, collected, actionMultiplier = 1f;
+    private float timer, timerMax, collected;
     private float disruption;
     private string combatLog = "The forest hums with latent Essence.";
     private string resultTitle = "Encounter complete";
@@ -28,57 +30,82 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     private float exp, gold, legacy;
     private Vector3 playerPosition = new Vector3(0, 1.12f, -3);
     private readonly Vector3 bossArenaCenter = new Vector3(100, 0, 0);
-    private Transform player, worldRoot, flask;
+    private Transform player, worldRoot, flask, runeBlade, bossRoot;
     private Camera cam;
+    private InputAction moveAction;
     private GUIStyle titleStyle, labelStyle, mutedStyle, buttonStyle, smallStyle;
     private Texture2D pixel;
     private bool initialized;
     private float pulse;
     private float flaskVisibleUntil;
+    private bool actionAnimating;
 
     private void Awake()
     {
         if (initialized) return;
         initialized = true;
         Application.targetFrameRate = 60;
+        ConfigureMovementInput();
         LoadGame();
         BuildWorld();
+    }
+
+    private void OnDestroy()
+    {
+        if(moveAction!=null) { moveAction.Disable(); moveAction.Dispose(); }
+    }
+
+    private void ConfigureMovementInput()
+    {
+        moveAction=new InputAction("Move",InputActionType.Value);
+        moveAction.AddCompositeBinding("2DVector")
+            .With("Up","<Keyboard>/w").With("Down","<Keyboard>/s")
+            .With("Left","<Keyboard>/a").With("Right","<Keyboard>/d");
+        moveAction.AddCompositeBinding("2DVector")
+            .With("Up","<Keyboard>/upArrow").With("Down","<Keyboard>/downArrow")
+            .With("Left","<Keyboard>/leftArrow").With("Right","<Keyboard>/rightArrow");
+        moveAction.AddBinding("<Gamepad>/leftStick");
+        moveAction.Enable();
     }
 
     private void Update()
     {
         pulse += Time.deltaTime;
+        if (flask != null && player != null)
+        {
+            bool shaking = Time.time < flaskVisibleUntil;
+            flask.localScale = shaking ? new Vector3(.12f,.27f,.12f) : Vector3.zero;
+            flask.localPosition = shaking ? new Vector3(.35f,.62f,.25f) : new Vector3(.52f,.18f,.02f);
+            flask.localRotation = Quaternion.Euler(0, 0, shaking ? Mathf.Sin(Time.time * 42f) * 32f : 0);
+            if (!actionAnimating) player.localScale = shaking ? new Vector3(.72f,.68f,.72f) : new Vector3(.72f,1.12f,.72f);
+            if (!actionAnimating) player.position = new Vector3(player.position.x, shaking ? .68f : 1.12f, player.position.z);
+        }
         bool roaming = screen == GameScreen.Explore || (screen == GameScreen.Combat && enemy != null && enemy.Title == "Eclipse Boss");
         if (!roaming || player == null) return;
-        float x = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) ? 1f : 0f) - (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) ? 1f : 0f);
-        float z = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) ? 1f : 0f) - (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) ? 1f : 0f);
-        Vector3 move = new Vector3(x, 0, z).normalized;
-        playerPosition += move * (4.2f * Time.deltaTime);
-        if (screen == GameScreen.Combat)
+        Vector3 move=Vector3.zero;
+        if(!actionAnimating)
         {
-            playerPosition.x = Mathf.Clamp(playerPosition.x, bossArenaCenter.x - 13, bossArenaCenter.x + 13);
-            playerPosition.z = Mathf.Clamp(playerPosition.z, bossArenaCenter.z - 13, bossArenaCenter.z + 13);
-        }
-        else
-        {
-            playerPosition.x = Mathf.Clamp(playerPosition.x, -18, 18);
-            playerPosition.z = Mathf.Clamp(playerPosition.z, -14, 18);
+            Vector2 moveValue=moveAction!=null ? moveAction.ReadValue<Vector2>() : Vector2.zero;
+            move = new Vector3(moveValue.x, 0, moveValue.y).normalized;
+            playerPosition += move * (4.2f * Time.deltaTime);
+            if (screen == GameScreen.Combat)
+            {
+                playerPosition.x = Mathf.Clamp(playerPosition.x, bossArenaCenter.x - 13, bossArenaCenter.x + 13);
+                playerPosition.z = Mathf.Clamp(playerPosition.z, bossArenaCenter.z - 13, bossArenaCenter.z + 13);
+            }
+            else
+            {
+                playerPosition.x = Mathf.Clamp(playerPosition.x, -18, 18);
+                playerPosition.z = Mathf.Clamp(playerPosition.z, -14, 18);
+            }
+            if (move.sqrMagnitude > .01f) player.rotation = Quaternion.LookRotation(move);
         }
         player.position = playerPosition;
-        if (move.sqrMagnitude > .01f) player.rotation = Quaternion.LookRotation(move);
         if (cam != null)
         {
             Vector3 target = player.position + new Vector3(0, 5.8f, -8.5f);
             cam.transform.position = Vector3.Lerp(cam.transform.position, target, Time.deltaTime * 3f);
             cam.transform.LookAt(player.position + Vector3.up * 1.1f);
-        }
-        if (flask != null)
-        {
-            bool shaking = Time.time < flaskVisibleUntil;
-            flask.localScale = shaking ? new Vector3(.12f,.27f,.12f) : Vector3.zero;
-            flask.localRotation = Quaternion.Euler(0, 0, shaking ? Mathf.Sin(Time.time * 42f) * 32f : 0);
-            player.localScale = shaking ? new Vector3(.72f,.68f,.72f) : new Vector3(.72f,1.12f,.72f);
-            player.position = new Vector3(player.position.x, shaking ? .68f : 1.12f, player.position.z);
         }
     }
 
@@ -124,6 +151,8 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         MakePrimitive(PrimitiveType.Sphere, "Wayfarer aura", playerPosition + Vector3.up * 1.1f, new Vector3(.2f,.2f,.2f), new Color(.7f,.4f,1), player);
         flask = MakePrimitive(PrimitiveType.Cylinder, "Empty flask", playerPosition + new Vector3(.55f,.3f,.05f), Vector3.zero, new Color(.25f,.77f,.85f), player).transform;
         flask.localPosition = new Vector3(.52f,.18f,.02f);
+        runeBlade = MakePrimitive(PrimitiveType.Cylinder,"Wayfarer · rune blade",playerPosition,Vector3.zero,new Color(.72f,.9f,1f),player).transform;
+        runeBlade.localPosition=new Vector3(.52f,.25f,.35f);
         // Three distant encounter landmarks
         MakeLandmark("Gloamling", new Vector3(-8, .8f, 10), new Color(.63f,.32f,.82f));
         MakeLandmark("Moss Warden", new Vector3(8, 1.1f, 15), new Color(.3f,.65f,.46f));
@@ -143,20 +172,21 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             MakePrimitive(PrimitiveType.Sphere,"Violet ward",p+Vector3.up*2.1f,new Vector3(.22f,.22f,.22f),new Color(.64f,.28f,.94f),worldRoot);
         }
         Vector3 b=c+new Vector3(0,1.25f,6.5f);
-        var body=MakePrimitive(PrimitiveType.Capsule,"Hollow Stag · body",b,new Vector3(1.15f,1.4f,2.4f),new Color(.45f,.35f,.2f),worldRoot);
+        bossRoot=new GameObject("Hollow Stag boss rig").transform; bossRoot.SetParent(worldRoot); bossRoot.position=b;
+        var body=MakePrimitive(PrimitiveType.Capsule,"Hollow Stag · body",b,new Vector3(1.15f,1.4f,2.4f),new Color(.45f,.35f,.2f),bossRoot);
         body.transform.rotation=Quaternion.Euler(90,0,0);
-        MakePrimitive(PrimitiveType.Sphere,"Hollow Stag · chest",b+new Vector3(0,.55f,-1.45f),new Vector3(.9f,1.05f,.95f),new Color(.55f,.43f,.26f),worldRoot);
-        MakePrimitive(PrimitiveType.Sphere,"Hollow Stag · head",b+new Vector3(0,.75f,-2.25f),new Vector3(.65f,.7f,.7f),new Color(.58f,.45f,.27f),worldRoot);
+        MakePrimitive(PrimitiveType.Sphere,"Hollow Stag · chest",b+new Vector3(0,.55f,-1.45f),new Vector3(.9f,1.05f,.95f),new Color(.55f,.43f,.26f),bossRoot);
+        MakePrimitive(PrimitiveType.Sphere,"Hollow Stag · head",b+new Vector3(0,.75f,-2.25f),new Vector3(.65f,.7f,.7f),new Color(.58f,.45f,.27f),bossRoot);
         for(int side=-1;side<=1;side+=2)
         {
             Vector3 antler=b+new Vector3(side*.38f,1.35f,-2.3f);
-            var tine=MakePrimitive(PrimitiveType.Cylinder,"Moon antler",antler+new Vector3(side*.18f,.5f,0),new Vector3(.09f,.65f,.09f),new Color(.72f,.65f,.47f),worldRoot);
+            var tine=MakePrimitive(PrimitiveType.Cylinder,"Moon antler",antler+new Vector3(side*.18f,.5f,0),new Vector3(.09f,.65f,.09f),new Color(.72f,.65f,.47f),bossRoot);
             tine.transform.rotation=Quaternion.Euler(0,0,-side*18);
-            var tine2=MakePrimitive(PrimitiveType.Cylinder,"Moon antler tine",antler+new Vector3(side*.48f,.72f,0),new Vector3(.07f,.4f,.07f),new Color(.72f,.65f,.47f),worldRoot);
+            var tine2=MakePrimitive(PrimitiveType.Cylinder,"Moon antler tine",antler+new Vector3(side*.48f,.72f,0),new Vector3(.07f,.4f,.07f),new Color(.72f,.65f,.47f),bossRoot);
             tine2.transform.rotation=Quaternion.Euler(0,0,-side*48);
         }
         for(int side=-1;side<=1;side+=2) for(int front=-1;front<=1;front+=2)
-            MakePrimitive(PrimitiveType.Cylinder,"Stag leg",b+new Vector3(side*.65f,-.75f,front*1.25f),new Vector3(.18f,.85f,.18f),new Color(.35f,.28f,.19f),worldRoot);
+            MakePrimitive(PrimitiveType.Cylinder,"Stag leg",b+new Vector3(side*.65f,-.75f,front*1.25f),new Vector3(.18f,.85f,.18f),new Color(.35f,.28f,.19f),bossRoot);
         MakePrimitive(PrimitiveType.Cylinder,"Boss arena sigil",c+Vector3.up*.015f,new Vector3(5,.03f,5),new Color(.34f,.17f,.46f),worldRoot);
     }
 
@@ -225,7 +255,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         EncounterButton(x+18,301,cw-36,"03   Hollow Stag", "Boss • 1,250 Essence", 2);
         Text(new Rect(x+16,402,cw-32,32),$"ENCOUNTERS COMPLETED   {encounters}     •     MINI CLONES   {clones}",mutedStyle);
         Box(new Rect(w/2-150,h-54,300,34),new Color(.04f,.05f,.08f,.75f));
-        Text(new Rect(w/2-140,h-50,280,26),"W A S D     MOVE THROUGH THE FOREST",mutedStyle);
+        Text(new Rect(w/2-140,h-50,280,26),"WASD / ARROWS / LEFT STICK  ·  MOVE",mutedStyle);
         if(clones==0 && legacy>=100) Button(new Rect(w-338,h-113,310,46),"CREATE MINI CLONE  ·  100 LEGACY",CreateClone,new Color(.37f,.2f,.55f));
     }
     private void EncounterButton(float x,float y,float width,string name,string desc,int index)
@@ -273,14 +303,17 @@ public sealed class EclipseFrontierGame : MonoBehaviour
             Text(new Rect(x+12,cardY+31,155,18),$"RESERVOIR   {m.Essence:0} / {m.Capacity:0}",mutedStyle);
             Bar(new Rect(x+12,cardY+56,153,8),m.Essence/m.Capacity,new Color(.55f,.32f,.79f));
         }
-        float ay=cardY+98, bw=177, gap=14;
-        ActionButton(new Rect(px,ay,bw,70),"EXTRACT",$"10 sec  ·  gather Essence",()=>Extract(1f,10f),new Color(.33f,.19f,.47f));
-        ActionButton(new Rect(px+bw+gap,ay,bw,70),"SHAKE FLASK",$"5 sec  ·  kneel, seek a last drop",Focus,new Color(.13f,.29f,.34f));
-        ActionButton(new Rect(px+(bw+gap)*2,ay,bw,70),"DEFEND",$"3 sec  ·  resist behavior",Defend,new Color(.22f,.26f,.38f));
-        ActionButton(new Rect(px+(bw+gap)*3,ay,bw,70),"BURST",$"15 sec  ·  extract ×2.4",()=>Extract(2.4f,15f),new Color(.48f,.2f,.28f));
+        float ay=cardY+98, bw=232, gap=20, start=px+(pw-(bw*3+gap*2))/2;
+        ActionButton(new Rect(start,ay,bw,70),"EMPTY FLASK",$"10 sec  ·  kneel, shake, extract",DrinkAndExtract,new Color(.33f,.19f,.47f));
+        bool isBoss=enemy.Title=="Eclipse Boss";
+        Action burstAction;
+        if(isBoss) burstAction=MountedStrike;
+        else burstAction=()=>Extract(2.4f,15f);
+        ActionButton(new Rect(start+bw+gap,ay,bw,70),isBoss?"AERIAL RUNE STRIKE":"BURST EXTRACTION",isBoss?"15 sec  ·  leap onto armor, strike a rune":"15 sec  ·  extract ×2.4",burstAction,new Color(.48f,.2f,.28f));
+        ActionButton(new Rect(start+(bw+gap)*2,ay,bw,70),"GROUNDING SHOVE",$"3 sec  ·  break stance, gain 5 sec",GroundingShove,new Color(.22f,.26f,.38f));
         Box(new Rect(px,ay+82,pw,48),new Color(.035f,.04f,.07f,.91f));
         Text(new Rect(px+14,ay+90,pw-28,20),"FIELD LOG   /   "+combatLog,mutedStyle);
-        if(enemy.Title=="Eclipse Boss") Text(new Rect(px+14,ay+111,pw-28,18),"W A S D  /  ARROWS  ·  RUN THROUGH THE ARENA",mutedStyle);
+        if(enemy.Title=="Eclipse Boss") Text(new Rect(px+14,ay+111,pw-28,18),"WASD / ARROWS / LEFT STICK  ·  RUN THROUGH THE ARENA",mutedStyle);
         Button(new Rect(w-190,h-48,165,30),"RETREAT",()=>Finish(false),new Color(.24f,.18f,.2f));
     }
     private void Bar(Rect r,float ratio,Color color) { Box(r,new Color(.15f,.15f,.2f)); Box(new Rect(r.x,r.y,r.width*Mathf.Clamp01(ratio),r.height),color); }
@@ -312,7 +345,7 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         string[] names={"Gloamling","Moss Warden","Hollow Stag"}, titles={"Veil Wisp","Ancient Sentinel","Eclipse Boss"}, behaviors={"Disrupt · weakens extraction", "Recovery · resistance rises", "Phase Shift · changing forms"};
         float[] max={420,760,1250}, resist={.08f,.18f,.24f};
         enemy=new Enemy { Name=names[index],Title=titles[index],Max=max[index],Essence=max[index],Resistance=resist[index],Behavior=behaviors[index] };
-        collected=0; timerMax=75; timer=timerMax; actionMultiplier=1; disruption=0; combatLog="Encounter opened. Choose an action; the timer pauses while you decide.";
+        collected=0; timerMax=75; timer=timerMax; disruption=0; combatLog="Encounter opened. Choose an action; the timer pauses while you decide.";
         encounters++; screen=GameScreen.Combat;
         if(player != null)
         {
@@ -324,9 +357,9 @@ public sealed class EclipseFrontierGame : MonoBehaviour
     {
         if(screen!=GameScreen.Combat || timer<=0) return;
         if(timer<cost) { resultTitle="Extraction window closed"; resultBody="There was not enough time to complete that action. Your gathered Essence remains yours."; Finish(false); return; }
-        float output=92f*mult*actionMultiplier*(1-enemy.Resistance)*(1-disruption);
+        float output=92f*mult*(1-enemy.Resistance)*(1-disruption);
         float gain=Distribute(Mathf.Min(output,enemy.Essence));
-        enemy.Essence-=gain; collected+=gain; timer-=cost; actionMultiplier=1;
+        enemy.Essence-=gain; collected+=gain; timer-=cost;
         combatLog=$"Essence drawn: {gain:0}. {enemy.Name} has {enemy.Essence:0} Essence remaining.";
         disruption=0;
         if(enemy.Essence<=.01f) { enemy.Essence=0; resultTitle="Enemy depleted"; resultBody=$"{enemy.Name} dissolves into a stream of violet light."; Finish(true); }
@@ -334,14 +367,67 @@ public sealed class EclipseFrontierGame : MonoBehaviour
         else EnemyTurn();
         SaveGame();
     }
-    private void Focus()
+    private void DrinkAndExtract()
     {
-        if(!Spend(5))return; actionMultiplier=1.6f; flaskVisibleUntil=Time.time+2.5f;
-        combatLog="The flask is empty. You kneel, shake it in desperation, and catch a final drop of Essence."; EnemyTurn();
+        flaskVisibleUntil=Time.time+2.4f;
+        Extract(1f,10f);
+        if(screen==GameScreen.Combat) combatLog="Empty flask: you kneel, tip it up, and shake it repeatedly for one last drop.";
     }
-    private void Defend()
+    private void MountedStrike()
     {
-        if(!Spend(3))return; timer=Mathf.Min(timer+5,timerMax); combatLog="A ward steadies your reservoirs and restores 5 seconds."; EnemyTurn(false);
+        if(screen!=GameScreen.Combat || enemy==null || enemy.Title!="Eclipse Boss") return;
+        if(timer<15f) { Extract(2.4f,15f); return; }
+        StartCoroutine(MountedStrikeAnimation());
+        Extract(2.4f,15f);
+        if(screen==GameScreen.Combat) combatLog="You vault onto the guardian's armor and strike a rune as it topples onto its back.";
+    }
+    private IEnumerator MountedStrikeAnimation()
+    {
+        actionAnimating=true;
+        Vector3 origin=player.position, target=bossRoot.position+new Vector3(0,2.05f,-.25f);
+        bossRoot.localRotation=Quaternion.Euler(0,0,165f);
+        float t=0;
+        while(t<.38f)
+        {
+            t+=Time.deltaTime; float a=Mathf.Clamp01(t/.38f);
+            player.position=Vector3.Lerp(origin,target,a)+Vector3.up*Mathf.Sin(a*Mathf.PI)*1.3f;
+            player.rotation=Quaternion.LookRotation(Vector3.forward);
+            yield return null;
+        }
+        runeBlade.localScale=new Vector3(.08f,.9f,.08f);
+        runeBlade.localRotation=Quaternion.Euler(0,0,-55);
+        yield return new WaitForSeconds(.65f);
+        runeBlade.localScale=Vector3.zero;
+        t=0;
+        while(t<.34f)
+        {
+            t+=Time.deltaTime; float a=Mathf.Clamp01(t/.34f);
+            player.position=Vector3.Lerp(target,origin,a)+Vector3.up*Mathf.Sin((1-a)*Mathf.PI)*.8f;
+            yield return null;
+        }
+        player.position=origin; player.localScale=new Vector3(.72f,1.12f,.72f);
+        bossRoot.localRotation=Quaternion.identity; actionAnimating=false;
+    }
+    private void GroundingShove()
+    {
+        if(!Spend(3))return;
+        timer=Mathf.Min(timer+5,timerMax);
+        StartCoroutine(GroundingShoveAnimation());
+        combatLog="You drop into a low stance and shoulder-check forward, then recoil to break the boss's guard.";
+        EnemyTurn(false);
+    }
+    private IEnumerator GroundingShoveAnimation()
+    {
+        actionAnimating=true;
+        Vector3 origin=player.position;
+        for(int i=0;i<3;i++)
+        {
+            float t=0;
+            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*Mathf.Clamp01(t/.18f)); player.localScale=new Vector3(.72f,.72f,.72f); yield return null; }
+            t=0;
+            while(t<.18f) { t+=Time.deltaTime; player.position=origin+new Vector3(0,-.36f,.5f*(1-Mathf.Clamp01(t/.18f))); yield return null; }
+        }
+        player.position=origin; player.localScale=new Vector3(.72f,1.12f,.72f); actionAnimating=false;
     }
     private bool Spend(float cost)
     {
