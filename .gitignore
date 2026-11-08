@@ -7,6 +7,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+[Rr]ecordings/
 
 # Memory Captures
 [Mm]emoryCaptures/
@@ -37,12 +38,16 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.csproj.user
+*.sln.docstates
+*.cache
 
 # Rider
 *.sln.iml
 
 # Unity Crash Reports
 sysinfo.txt
+crashlytics-build.properties
 
 # Builds
 *.apk
